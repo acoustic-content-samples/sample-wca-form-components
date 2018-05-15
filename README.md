@@ -8,15 +8,15 @@ This repository contains a set of sample site components to showcase how to inte
 - [Sample Screenshots](#sample-screenshots)
 - [Prerequisites](#prerequisites)
 - [Install and deploy the sample](#install-and-deploy-the-sample)
-  - [Configure your Wchtools](#configure-your-wchtools)
+  - [Configure your wchtools](#configure-your-wchtools)
   - [Install the package content-artifacts and  site-application-files](#clone-and-install-the-sample-content-artifacts-and-site-application-files)
   - [Build and Deploy your components](#build-and-deploy-your-components)
 - [Add an iFrame form to a page](#add-an-iframe-form-to-a-page)
 - [Add a native form to a page](#add-a-native-form-to-a-page)
-  - [1. Parse the WCA form](#parse-the-wca-form)
-  - [2. Update the sample form with your WCA information](#update-the-sample-form-with-your-wca-information)
-  - [3. Deploy your WCA form component](#deploy-your-wca-form-component)
-  - [4. Add your WCA form component to a page](#add-your-wca-form-component-to-a-page)
+  - [1. Parse the WCA form](#1-parse-the-wca-form)
+  - [2. Update the sample form with your WCA information](#2-update-the-sample-form-with-your-wca-information)
+  - [3. Deploy your WCA form component](#3-deploy-your-wca-form-component)
+  - [4. Add your WCA form component to a page](#4-add-your-wca-form-component-to-a-page)
 - [Samples go live](#samples-go-live)
 - [License](#license)
 
@@ -33,7 +33,7 @@ You can see what example plugin components look like here:
 ## Prerequisites
 * A WCH tenant in Trial or Standard Tier
 * Latest wch-site-application source (see: https://github.com/ibm-wch/wch-site-application)
-* Wchtools-cli v2.0.3 or above
+* wchtools-cli v2.0.3 or above
 * Node.js v6.11.1 or above
 
 ## Install and deploy the sample
