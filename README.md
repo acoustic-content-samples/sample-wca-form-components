@@ -56,11 +56,16 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ## Add an iFrame form to a page
 * Copy the URL to your form from WCA:
+
 ![copy form URL](/doc/images/copyFormURL.png)
-* Create page
-* Configure
+
+* [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
+* Create and configure a new **native WCA form** on the page
+
 ![configure iframe](/doc/images/configureIframe.png)
-* View
+
+* Publish your changes to view the form on your live site
+
 ![iFrame example](/doc/images/iframeExample.png)
 
 ## Add a native form to a page
@@ -69,10 +74,15 @@ Embed a WCA form directly into a WCH page by adding the form directly to a compo
 
 ### 1. Parse the WCA form
 * Go directly to your WCA form in a browser:
+
 ![form](/doc/images/form.png)
+
 * Inspect the form using your developer tools, to get the POST action url (ignore URL parameters):
+
 ![POST URL](/doc/images/postURL.png)
+
 * Inspect the form input fields, and gather the type, name and value for each one:
+
 ![form inputs](/doc/images/formInputs.png)
 
 The sample form information:
@@ -99,10 +109,14 @@ The sample form information:
 * From within the wch-site-application directory run `npm run build-deploy`
 
 ### 4. Add your WCA form component to a page
-* Create page
-* Configure
+* [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
+
+* Create a new **native WCA form** on the page
+
 ![configure native](/doc/images/configureNative.png)
-* View
+
+* Publish your changes to view the form on your live site
+
 ![native example](/doc/images/nativeExample.png)
 
 ## Samples go live
