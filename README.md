@@ -50,9 +50,20 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 ```
 
 ### Build and deploy your components
-1. From within the wch-site-application directory run:
-2. `npm run build` to compile the project. Make sure there is no error during the build process.
-3. `npm run deploy` to your WCH tenant. After that, you can see your changes in your WCH live site.
+1. Open _src/app/app.module.ts_ in the wch-site-application directory, and import the `ReactiveFormsModule` module:
+```
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+
+@NgModule({
+	imports: [
+		FormsModule,
+		ReactiveFormsModule
+	]
+})
+```
+2. From within the wch-site-application directory run:
+3. `npm run build` to compile the project. Make sure there is no error during the build process.
+4. `npm run deploy` to your WCH tenant. After that, you can see your changes in your WCH live site.
 
 ## Add an iFrame form to a page
 1. Copy the URL to your form from WCA:

@@ -1,0 +1,25 @@
+<!-- layout type -->
+<h1>IframeWcaFormLayoutComponent</h1>
+<!-- show some metainformation -->
+<h2>Meta Information</h2>
+<dl>
+    <!-- more properties are available, consult https://www.npmjs.com/package/ibm-wch-sdk-ng for documentation -->
+    <dt>ID</dt>
+    <dd>{{ renderingContext.id }}</dd>
+    <dt>name</dt>
+    <dd>{{ renderingContext.name }}</dd>
+</dl>
+<a href="https://www.npmjs.com/package/ibm-wch-sdk-ng">more documentation</a>
+<!-- show the fields -->
+<h2>Property List</h2>
+  <dl>
+  <dt>
+    Property: *source
+| Key: source
+| Label: source
+  </dt>
+  <dd>
+<!-- link -->
+    <a wchEditable="source" [href]="source.linkURL" [title]="source.linkDescription">{{ source.linkText }}</a>
+</dd>
+</dl>

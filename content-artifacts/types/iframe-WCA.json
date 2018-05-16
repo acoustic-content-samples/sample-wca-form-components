@@ -1,0 +1,20 @@
+{
+  "id": "b2ed83c3-9ec2-48ff-9101-b008c5ced64b",
+  "rev": "3-3005dade8a8b4a36d2125de2859aa0bd",
+  "name": "iframe WCA form",
+  "classification": "content-type",
+  "kind": [
+    "standalone"
+  ],
+  "description": "",
+  "status": "ready",
+  "tags": [],
+  "elements": [
+    {
+      "elementType": "link",
+      "label": "source",
+      "key": "source",
+      "required": true
+    }
+  ]
+}
