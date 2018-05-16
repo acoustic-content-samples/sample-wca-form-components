@@ -78,6 +78,7 @@ Embed a WCA form directly into a WCH page by adding the form directly to a compo
 The sample form information:
 * action URL: _/org/sports/sign-up_
 * form input elements:
+
 | Type     | Name      | Value                |
 | -------- |:---------:|:--------------------:|
 | text     | COLUMN22  | N/A                  |
