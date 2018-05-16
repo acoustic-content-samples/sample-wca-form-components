@@ -39,32 +39,32 @@ You can see what example plugin components look like here:
 ## Install and deploy the sample
 
 ### Configure your wchtools
-* Get your WCH tenant API URL. Go to your WCH homepage -> YOUR USERNAME tab on top bar -> Hub information -> API URL. Copy the URL.
-* Run `wchtools init` in your command line. Enter your username and API URL to configure the wchtools
+1. Get your WCH tenant API URL. Go to your WCH homepage -> YOUR USERNAME tab on top bar -> Hub information -> API URL. Copy the URL.
+2. Run `wchtools init` in your command line. Enter your username and API URL to configure the wchtools
 
 ### Clone and install the sample content-artifacts and site-application-files
-* Change the command line directory to site application's root directory (i.e. wch-site-application). If you haven't already done so, perform all of the required installation steps for the site application repository.
-* Using the Git URL to the sample-wca-form-components repository, run this command to copy the needed sample site-application-files and update the layout settings for the new components.
+1. Change the command line directory to site application's root directory (i.e. wch-site-application). If you haven't already done so, perform all of the required installation steps for the site application repository.
+2. Using the Git URL to the sample-wca-form-components repository, run this command to copy the needed sample site-application-files and update the layout settings for the new components.
 ```
 npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-components.git
 ```
 
 ### Build and deploy your components
-* From within the wch-site-application directory run:
-* `npm run build` to compile the project. Make sure there is no error during the build process.
-* `npm run deploy` to your WCH tenant. After that, you can see your changes in your WCH live site.
+1. From within the wch-site-application directory run:
+2. `npm run build` to compile the project. Make sure there is no error during the build process.
+3. `npm run deploy` to your WCH tenant. After that, you can see your changes in your WCH live site.
 
 ## Add an iFrame form to a page
-* Copy the URL to your form from WCA:
+1. Copy the URL to your form from WCA:
 
 ![copy form URL](/doc/images/copyFormURL.png)
 
-* [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
-* Create and configure a new **native WCA form** on the page
+2. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
+3. Create and configure a new **native WCA form** on the page
 
 ![configure iframe](/doc/images/configureIframe.png)
 
-* Publish your changes to view the form on your live site
+4. Publish your changes to view the form on your live site
 
 ![iFrame example](/doc/images/iframeExample.png)
 
@@ -73,15 +73,15 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 Embed a WCA form directly into a WCH page by adding the form directly to a component. Once you have the POST action URL and parameters from your WCA form, just replace the sample form in _src/app/layouts/native-wca-form/nativeWcaFormLayout.html_, using the following steps:
 
 ### 1. Parse the WCA form
-* Go directly to your WCA form in a browser:
+1. Go directly to your WCA form in a browser:
 
 ![form](/doc/images/form.png)
 
-* Inspect the form using your developer tools, to get the POST action url (ignore URL parameters):
+2. Inspect the form using your developer tools, to get the POST action url (ignore URL parameters):
 
 ![POST URL](/doc/images/postURL.png)
 
-* Inspect the form input fields, and gather the type, name and value for each one:
+3. Inspect the form input fields, and gather the type, name and value for each one:
 
 ![form inputs](/doc/images/formInputs.png)
 
@@ -103,25 +103,25 @@ The sample form information:
 | checkbox | COLUMN111 | Golf & Racket Sports |
 
 ### 2. Update the sample form with your WCA information
-* TODO
+1. TODO
 
 ### 3. Deploy your WCA form component
-* From within the wch-site-application directory run `npm run build-deploy`
+1. From within the wch-site-application directory run `npm run build-deploy`
 
 ### 4. Add your WCA form component to a page
-* [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
+1. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
 
-* Create a new **native WCA form** on the page
+2. Create a new **native WCA form** on the page
 
 ![configure native](/doc/images/configureNative.png)
 
-* Publish your changes to view the form on your live site
+3. Publish your changes to view the form on your live site
 
 ![native example](/doc/images/nativeExample.png)
 
 ## Samples go live
-* Go to Your WCH homepage -> YOUR USERNAME on the top bar -> Hub information.
-* You could view your newest site by clicking "Live site".
+1. Go to Your WCH homepage -> YOUR USERNAME on the top bar -> Hub information.
+2. You could view your newest site by clicking "Live site".
 
 ## License
 See the included license file [License](license.txt) .
