@@ -81,7 +81,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 ## Add a native form to a page
 
-Embed a WCA form directly into a WCH page by adding the form directly to a component. Once you have the POST action URL and parameters from your WCA form, just replace the sample form in _src/app/layouts/native-wca-form/nativeWcaFormLayout.html_, using the following steps:
+Embed a WCA form directly into a WCH page by adding the form directly to a component. Once you have the POST action URL and parameters from your WCA form, just rCOLUMN94eplace the sample form in _src/app/layouts/native-wca-form/nativeWcaFormLayout.html_, using the following steps:
 
 ### 1. Parse the WCA form
 1. Go directly to your WCA form in a browser:
@@ -107,6 +107,7 @@ The sample form information:
 | text     | EMAIL     | N/A                  |
 | radio    | COLUMN92  | Yes                  |
 | radio    | COLUMN92  | No                   |
+| select   | COLUMN94  | N/A                  |
 | checkbox | COLUMN111 | Team Sports          |
 | checkbox | COLUMN111 | Roller Sports        |
 | checkbox | COLUMN111 | Fishing & Hunting    |

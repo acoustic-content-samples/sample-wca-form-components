@@ -1,40 +1,58 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+<div class="grid-x wca-form">
+	<div class="cell medium-8">
 
-	<div>
-		<label for="wcaFormCOLUMN22">First Name</label>
-		<input type="text" formControlName="COLUMN22" id="wcaFormCOLUMN22">
-	</div>
+		<h3 *ngIf="title" wchEditable="title">{{ title }}</h3>
 
-	<div>
-		<label for="wcaFormCOLUMN28">Last Name</label>
-		<input type="text" formControlName="COLUMN28" id="wcaFormCOLUMN28">
-	</div>
+		<div *ngIf="hasError && errorMessage" wchEditable="errorMessage" class="invalid-login" role="alert">
+			{{ errorMessage }}
+        </div>
 
-	<div>
-		<label for="wcaFormEMAIL">Email</label>
-		<input type="email" formControlName="EMAIL" id="wcaFormEMAIL" email required>
-	</div>
+		<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
 
-	<div>
-		<div>New Player</div>
-		<div *ngFor="let answer of playerAnswers">
-			<input type="radio" formControlName="COLUMN92" [value]="answer" id="wcaForm{{answer}}">
-			<label for="wcaForm{{answer}}">{{answer}}</label>
+			<!-- iterate over all the form controls -->
+			<ng-container *ngFor="let element of formElements" [ngSwitch]="element.type">
+
+				<!-- simple default (includes the text type) -->
+				<ng-container *ngSwitchDefault>
+					<label for="wcaForm{{element.name}}">{{ element.label }}</label>
+					<input type="{{element.type}}" formControlName="{{element.name}}" id="wcaForm{{element.name}}" placeholder="{{element.placeholder}}">
+				</ng-container>
+
+				<!-- radio button groups -->
+				<ng-container *ngSwitchCase="'radio'">
+					<div class="group-label">{{ element.label }}</div>
+					<div class="radio-group">
+						<ng-container *ngFor="let option of element.options">
+							<input type="radio" formControlName="COLUMN92" [value]="option.value" id="wcaForm{{option.value}}">
+							<label for="wcaForm{{option.value}}">{{ option.label }}</label>
+						</ng-container>
+					</div>
+				</ng-container>
+
+				<!-- checkbox groups -->
+				<ng-container *ngSwitchCase="'checkbox'" [formArrayName]="element.name">
+					<div class="group-label">{{ element.label }}</div>
+					<ng-container *ngFor="let option of element.formArray.controls; let i=index" [formGroupName]="i">
+						<input type="checkbox" formControlName="checked" id="wcaForm{{option.controls.value.value}}">
+						<label for="wcaForm{{option.controls.value.value}}">{{ option.controls.label.value }}</label>
+					</ng-container>
+				</ng-container>
+
+			</ng-container>
+		
+			<p *ngIf="terms" wchEditable="terms">{{ terms }}</p>
+
+			<button type="submit" [disabled]="!form.valid || isLoading" *ngIf="submitButtonLabel" wchEditable="submitButtonLabel" class="button button-dark expanded">
+				{{ submitButtonLabel }}
+			</button>
+
+		</form>
+
+		<div class="wca-debug">
+			<!-- Remove this before moving to production -->
+			<p>View the form builder values here:</p>
+			<div>{{ form.value | json}}</div>
 		</div>
-	</div>
 
-	<div formArrayName="COLUMN111">
-		<div>Interests</div>
-		<div *ngFor="let interest of COLUMN111.controls; let i=index" [formGroupName]="i">
-			<input type="checkbox" formControlName="checked" id="wcaForm{{interest.controls.name.value}}">
-			<label for="wcaForm{{interest.controls.name.value}}">{{interest.controls.name.value}}</label>
-		</div>
 	</div>
-
-	<div>
-		<button type="submit" [disabled]="!form.valid || loading">Submit</button>
-	</div>
-</form>
-
-<div>Form values:</div>
-<div>{{ form.value | json}}</div>
+</div>
