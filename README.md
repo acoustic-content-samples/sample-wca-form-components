@@ -1,6 +1,6 @@
 # sample-wca-form-components
 
-This repository contains a set of sample site components to showcase how to integrate Watson Campaign Automation (WCA) forms into the Watson Content Hub Sites feature. The samples include two techniques: iFrame inclusion, and copying a WCA form into a new WCH component.
+This repository contains a set of sample site components to showcase how to integrate Watson Campaign Automation (WCA) forms into the Watson Content Hub Sites feature. The samples include two techniques: iframe inclusion, and embedding a WCA form into a native WCH component.
 
 ## Table of contents
 - [Table of Contents](#table-of-contents)
@@ -11,18 +11,19 @@ This repository contains a set of sample site components to showcase how to inte
   - [Configure your wchtools](#configure-your-wchtools)
   - [Install the package content-artifacts and  site-application-files](#clone-and-install-the-sample-content-artifacts-and-site-application-files)
   - [Build and Deploy your components](#build-and-deploy-your-components)
-- [Add an iFrame form to a page](#add-an-iframe-form-to-a-page)
+- [Add an iframe form to a page](#add-an-iframe-form-to-a-page)
 - [Add an embedded form to a page](#add-an-embedded-form-to-a-page)
 - [Samples go live](#samples-go-live)
+- [Advanced customization of the WCA form component](#advanced-customization-of-the-wca-form-component)
 - [License](#license)
 
 ## Introduction
-This sample repository provides two example plugin components for your WCH site. It includes an iFrame component, and a embedded WCA form component. With the iFrame component, you can display any WCA website in a customized iframe window. With the embeddd form component, you can create your WCA forms in a new WCH component.  To enable these 3 components, you have to install the packages `content-artifacts` and package `site-application-files` by following the steps below.
+This sample repository provides two example plugin components for your WCH site. It includes an iframe component, and a embedded WCA form component. With the iframe component, you can display any WCA form in an iframe window. With the embedded form component, you can configure your WCA forms using WCH content items.  To enable these 2 components, you have to install the packages _content-artifacts_ and package _site-application-files_ by following the steps below.
 
 ## Sample screenshots
-You can see what example plugin components look like here:
-### iFrame component
-![iFrame example](/doc/images/iframeExample.png)
+See the end result for each form inclusion technique:
+### iframe component
+![iframe example](/doc/images/iframeExample.png)
 ### Embed form component
 ![embed example](/doc/images/embedExample.png)
 
@@ -35,12 +36,12 @@ You can see what example plugin components look like here:
 ## Install and deploy the sample
 
 ### Configure your wchtools
-1. Get your WCH tenant API URL. Go to your WCH homepage -> YOUR USERNAME tab on top bar -> Hub information -> API URL. Copy the URL.
-2. Run `wchtools init` in your command line. Enter your username and API URL to configure the wchtools
+1. Get your WCH tenant API URL by copying it from your WCH homepage -> **your username** on top bar -> Hub information -> API URL -> Copy to clipboard
+2. Run `wchtools init` in your command line. Enter your username and API URL to configure wchtools.
 
 ### Clone and install the sample content-artifacts and site-application-files
-1. Change the command line directory to site application's root directory (i.e. wch-site-application). If you haven't already done so, perform all of the required installation steps for the site application repository.
-2. Using the Git URL to the sample-wca-form-components repository, run this command to copy the needed sample site-application-files and update the layout settings for the new components.
+1. Change the command line working directory to the _wch-site-application_ root folder. If you haven't already done so, perform all of the required installation steps for the site application repository.
+2. Using the git URL to the _sample-wca-form-components_ repository, run this command to copy the needed sample and update the layout settings for the new components:
 ```
 npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-components.git
 ```
@@ -57,23 +58,23 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 	]
 })
 ```
-2. From within the wch-site-application directory run:
-3. `npm run build` to compile the project. Make sure there is no error during the build process.
-4. `npm run deploy` to your WCH tenant. After that, you can see your changes in your WCH live site.
+2. From within the _wch-site-application_ directory run:
+	- `npm run build` to compile the project. Make sure there is no error during the build process.
+	- `npm run deploy` to your WCH tenant.
 
-## Add an iFrame form to a page
+## Add an iframe form to a page
 1. Copy the URL to your form from WCA:
 
 ![copy form URL](/doc/images/copyFormURL.png)
 
-2. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
-3. Create and configure a new **WCA iframe form** on the page
+2. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
+3. Create and configure a new **WCA iframe form** on the page:
 
 ![configure iframe](/doc/images/configureIframe.png)
 
-4. Publish your changes to view the form on your live site
+4. Publish your changes to view the form on your live site:
 
-![iFrame example](/doc/images/iframeExample.png)
+![iframe example](/doc/images/iframeExample.png)
 
 ## Add an embedded form to a page
 
@@ -110,30 +111,35 @@ The sample form information:
 | "         | "         | "           |           |                 |                  |               | Games & Toys         |
 | "         | "         | "           |           |                 |                  |               | Golf & Racket Sports |
 
-3. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
+3. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
 
-4. Create a new **WCA embed form** content item on the page
+4. Create a new **WCA embed form** content item on the page:
 
 ![configure embed](/doc/images/configureEmbed.png)
 
 5. Compose a new **WCA form element** to the content item, for each form element:
 
-Text input:
+	- text input:
+
 ![text example](/doc/images/textExample.png)
 
-Email input:
+	- email input:
+
 ![email example](/doc/images/emailExample.png)
 
-Radio group input:
+	- radio group input:
+
 ![radio example](/doc/images/radioExample.png)
 
-Select dropdown input:
+	- select dropdown input:
+
 ![select example](/doc/images/selectExample.png)
 
-Checkbox inputs:
+	- checkbox inputs:
+
 ![checkbox example](/doc/images/checkboxExample.png)
 
-6. Publish your changes to view the form on your live site
+6. Publish your changes to view the form on your live site:
 
 ![embed example](/doc/images/embedExample.png)
 
