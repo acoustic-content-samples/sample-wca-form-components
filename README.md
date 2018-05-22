@@ -12,23 +12,19 @@ This repository contains a set of sample site components to showcase how to inte
   - [Install the package content-artifacts and  site-application-files](#clone-and-install-the-sample-content-artifacts-and-site-application-files)
   - [Build and Deploy your components](#build-and-deploy-your-components)
 - [Add an iFrame form to a page](#add-an-iframe-form-to-a-page)
-- [Add a native form to a page](#add-a-native-form-to-a-page)
-  - [1. Parse the WCA form](#1-parse-the-wca-form)
-  - [2. Update the sample form with your WCA information](#2-update-the-sample-form-with-your-wca-information)
-  - [3. Deploy your WCA form component](#3-deploy-your-wca-form-component)
-  - [4. Add your WCA form component to a page](#4-add-your-wca-form-component-to-a-page)
+- [Add an embedded form to a page](#add-an-embedded-form-to-a-page)
 - [Samples go live](#samples-go-live)
 - [License](#license)
 
 ## Introduction
-This sample repository provides two example plugin components for your WCH site. It includes an iFrame component, and a native WCA form component. With the iFrame component, you can display any WCA website in a customized iframe window. With the native form component, you can create your WCA forms in a new WCH component.  To enable these 3 components, you have to install the packages `content-artifacts` and package `site-application-files` by following the steps below.
+This sample repository provides two example plugin components for your WCH site. It includes an iFrame component, and a embedded WCA form component. With the iFrame component, you can display any WCA website in a customized iframe window. With the embeddd form component, you can create your WCA forms in a new WCH component.  To enable these 3 components, you have to install the packages `content-artifacts` and package `site-application-files` by following the steps below.
 
 ## Sample screenshots
 You can see what example plugin components look like here:
 ### iFrame component
 ![iFrame example](/doc/images/iframeExample.png)
-### Native form component
-![native example](/doc/images/nativeExample.png)
+### Embed form component
+![embed example](/doc/images/embedExample.png)
 
 ## Prerequisites
 * A WCH tenant in Trial or Standard Tier
@@ -50,7 +46,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 ```
 
 ### Build and deploy your components
-1. Open _src/app/app.module.ts_ in the wch-site-application directory, and import the `ReactiveFormsModule` module:
+1. Open _src/app/app.module.ts_ in the _wch-site-application_ directory, and import the `ReactiveFormsModule` module:
 ```
 import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
@@ -71,7 +67,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 ![copy form URL](/doc/images/copyFormURL.png)
 
 2. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
-3. Create and configure a new **native WCA form** on the page
+3. Create and configure a new **WCA iframe form** on the page
 
 ![configure iframe](/doc/images/configureIframe.png)
 
@@ -79,61 +75,78 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 ![iFrame example](/doc/images/iframeExample.png)
 
-## Add a native form to a page
+## Add an embedded form to a page
 
-Embed a WCA form directly into a WCH page by adding the form directly to a component. Once you have the POST action URL and parameters from your WCA form, just rCOLUMN94eplace the sample form in _src/app/layouts/native-wca-form/nativeWcaFormLayout.html_, using the following steps:
-
-### 1. Parse the WCA form
 1. Go directly to your WCA form in a browser:
 
 ![form](/doc/images/form.png)
 
-2. Inspect the form using your developer tools, to get the POST action url (ignore URL parameters):
-
-![POST URL](/doc/images/postURL.png)
-
-3. Inspect the form input fields, and gather the type, name and value for each one:
+2. Inspect the form using your developer tools to get the POST action url (ignore URL parameters), the form input fields, and corresponding options:
 
 ![form inputs](/doc/images/formInputs.png)
 
 The sample form information:
-* action URL: _/org/sports/sign-up_
-* form input elements:
+* **Title**: Sign up here!
+* **Action URL**: _http://www.sample.net/org/sports/sign-up_
+* **Submit button label**: Sign up
+* **Terms**: Sign up to get the best deals with our weekly email newsletter.
+* **Error message**: Sorry! We could not sign you up, please try again.
+* **Form elements** and **option**s:
 
-| Type     | Name      | Value                |
-| -------- |:---------:|:--------------------:|
-| text     | COLUMN22  | N/A                  |
-| text     | COLUMN28  | N/A                  |
-| text     | EMAIL     | N/A                  |
-| radio    | COLUMN92  | Yes                  |
-| radio    | COLUMN92  | No                   |
-| select   | COLUMN94  | N/A                  |
-| checkbox | COLUMN111 | Team Sports          |
-| checkbox | COLUMN111 | Roller Sports        |
-| checkbox | COLUMN111 | Fishing & Hunting    |
-| checkbox | COLUMN111 | Games & Toys         |
-| checkbox | COLUMN111 | Golf & Racket Sports |
+| **name**  | **type**  | **label**   | **value** | **placeholder** | **Is required**? | **Is email**? | **option**           |
+| --------- | --------- | ----------- | --------- | --------------- | ---------------- | ------------- | -------------------- |
+| COLUMN22  | text      | First Name  |           |                 |                  |               |                      |
+| EMAIL     | email     | Email       |           | name@domain.com | yes              | yes           |                      |
+| COLUMN92  | radio     | New Player  | Yes       |                 |                  |               | Yes                  |
+| "         | "         | "           |           |                 |                  |               | No                   |
+| COLUMN94  | select    | Age Range   |           |                 |                  |               | 18-24                |
+| "         | "         | "           |           |                 |                  |               | 35-50                |
+| "         | "         | "           |           |                 |                  |               | 51-65                |
+| "         | "         | "           |           |                 |                  |               | 66-80                |
+| "         | "         | "           |           |                 |                  |               | 81+                  |
+| COLUMN111 | checkbox  | Interests   |           |                 |                  |               | Team Sports          |
+| "         | "         | "           |           |                 |                  |               | Roller Sports        |
+| "         | "         | "           |           |                 |                  |               | Fishing & Hunting    |
+| "         | "         | "           |           |                 |                  |               | Games & Toys         |
+| "         | "         | "           |           |                 |                  |               | Golf & Racket Sports |
 
-### 2. Update the sample form with your WCA information
-1. TODO
+3. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
 
-### 3. Deploy your WCA form component
-1. From within the wch-site-application directory run `npm run build-deploy`
+4. Create a new **WCA embed form** content item on the page
 
-### 4. Add your WCA form component to a page
-1. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one
+![configure embed](/doc/images/configureEmbed.png)
 
-2. Create a new **native WCA form** on the page
+5. Compose a new **WCA form element** to the content item, for each form element:
 
-![configure native](/doc/images/configureNative.png)
+Text input:
+![text example](/doc/images/textExample.png)
 
-3. Publish your changes to view the form on your live site
+Email input:
+![email example](/doc/images/emailExample.png)
 
-![native example](/doc/images/nativeExample.png)
+Radio group input:
+![radio example](/doc/images/radioExample.png)
+
+Select dropdown input:
+![select example](/doc/images/selectExample.png)
+
+Checkbox inputs:
+![checkbox example](/doc/images/checkboxExample.png)
+
+6. Publish your changes to view the form on your live site
+
+![embed example](/doc/images/embedExample.png)
 
 ## Samples go live
 1. Go to Your WCH homepage -> YOUR USERNAME on the top bar -> Hub information.
 2. You could view your newest site by clicking "Live site".
+
+### Advanced customization of the WCA form component
+If you would like to add additional features or updated styling to your WCA form:
+1. Open _src/app/layouts/wca-embed-form_ in the _wch-site-application_ directory 
+2. Edit the html, scss and ts files
+3. Use the [development server](https://github.com/ibm-wch/wch-site-application#changing-the-tenant), if desired
+4. From within the wch-site-application directory run `npm run build-deploy`
 
 ## License
 See the included license file [License](license.txt) .
