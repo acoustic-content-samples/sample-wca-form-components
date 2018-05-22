@@ -149,12 +149,12 @@ The sample form information:
 
 ### Advanced customization of the WCA form component
 If you would like to add additional features or updated styling to your WCA form:
-1. Open _src/app/layouts/wca-embed-form_ in the _wch-site-application_ directory 
-2. Edit the html, scss and ts files
-3. Use the [development server](https://github.com/ibm-wch/wch-site-application#changing-the-tenant), if desired
+1. Open _src/app/layouts/wca-embed-form_ in the _wch-site-application_ directory.
+2. Edit the html, scss and ts files.
+3. Use the [development server](https://github.com/ibm-wch/wch-site-application#changing-the-tenant), if desired.
 4. From within the wch-site-application directory run `npm run build-deploy`
 
 ## License
-See the included license file [License](license.txt) .
+See the included license file [License](license.txt).
 
 [back to top](#sample-wca-form-components)
