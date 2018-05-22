@@ -119,23 +119,23 @@ The sample form information:
 
 5. Compose a new **WCA form element** to the content item, for each form element:
 
-	- text input:
+- text input:
 
 ![text example](/doc/images/textExample.png)
 
-	- email input:
+- email input:
 
 ![email example](/doc/images/emailExample.png)
 
-	- radio group input:
+- radio group input:
 
 ![radio example](/doc/images/radioExample.png)
 
-	- select dropdown input:
+- select dropdown input:
 
 ![select example](/doc/images/selectExample.png)
 
-	- checkbox inputs:
+- checkbox inputs:
 
 ![checkbox example](/doc/images/checkboxExample.png)
 
