@@ -2,7 +2,7 @@ import {
     RenderingContext
 } from 'ibm-wch-sdk-ng';
 import { Component } from '@angular/core';
-import { AbstractIframeWcaFormComponent } from './abstractIframeWcaFormComponent';
+import { AbstractWcaEmbedFormComponent } from './abstractWcaEmbedFormComponent';
 
 /** Useful imports */
 // import { map } from 'rxjs/operators/map';
@@ -10,18 +10,18 @@ import { AbstractIframeWcaFormComponent } from './abstractIframeWcaFormComponent
 // import { distinctUntilChanged } from 'rxjs/operators/distinctUntilChanged';
 
 /*
- * @name iframe WCA form
- * @id b2ed83c3-9ec2-48ff-9101-b008c5ced64b
+ * @name WCA embed form
+ * @id 5f99ae4b-0d9e-4c5b-875d-aaa0a4d1ef33
  */
 /* TODO uncomment this if you plan to use the component standalone, i.e. not as the basis of a layout.
 @Component({
-  selector: 'app-type-iframe-wca-form-component',
-  templateUrl: './typeIframeWcaFormComponent.html',
-  styleUrls: ['./typeIframeWcaFormComponent.scss'],
+  selector: 'app-type-wca-embed-form-component',
+  templateUrl: './typeWcaEmbedFormComponent.html',
+  styleUrls: ['./typeWcaEmbedFormComponent.scss'],
   preserveWhitespaces: false
 })
 */
-export class TypeIframeWcaFormComponent extends AbstractIframeWcaFormComponent {
+export class TypeWcaEmbedFormComponent extends AbstractWcaEmbedFormComponent {
 
     /*
      * TODO add custom fields here. These fields should be those

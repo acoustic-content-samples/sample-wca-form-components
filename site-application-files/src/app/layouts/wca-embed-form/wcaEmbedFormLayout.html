@@ -1,16 +1,23 @@
 <div class="grid-x wca-form">
 	<div class="cell medium-8">
 
-		<h3 *ngIf="title" wchEditable="title">{{ title }}</h3>
+		<div class="titlebar">
+			<div *ngIf="isLoading" class="spinner"></div>
+			<div *ngIf="title" wchEditable="title" class="title">{{ title }}</div>
+		</div>
 
-		<div *ngIf="hasError && errorMessage" wchEditable="errorMessage" class="invalid-login" role="alert">
+		<div *ngIf="isSubmitted && successMessage" wchEditable="successMessage" class="success" role="alert">
+			{{ successMessage }}
+        </div>
+
+		<div *ngIf="hasError && errorMessage" wchEditable="errorMessage" class="error" role="alert">
 			{{ errorMessage }}
         </div>
 
-		<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+		<form *ngIf="!isSubmitted" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
 
 			<!-- iterate over all the form controls -->
-			<ng-container *ngFor="let element of formElements" [ngSwitch]="element.type">
+			<ng-container *ngFor="let element of formData" [ngSwitch]="element.type">
 
 				<!-- simple default (includes the text type) -->
 				<ng-container *ngSwitchDefault>
@@ -23,24 +30,33 @@
 					<div class="group-label">{{ element.label }}</div>
 					<div class="radio-group">
 						<ng-container *ngFor="let option of element.options">
-							<input type="radio" formControlName="COLUMN92" [value]="option.value" id="wcaForm{{option.value}}">
-							<label for="wcaForm{{option.value}}">{{ option.label }}</label>
+							<input type="radio" formControlName="{{element.name}}" [value]="option" id="wcaForm{{option}}">
+							<label for="wcaForm{{option}}">{{ option }}</label>
 						</ng-container>
 					</div>
+				</ng-container>
+
+				<!-- select dropdown menus -->
+				<ng-container *ngSwitchCase="'select'">
+					<div class="group-label">{{ element.label }}</div>
+					<select formControlName="{{element.name}}">
+						<option value="">Select one</option>
+						<option *ngFor="let option of element.options" [value]="option">{{ option }}</option>
+					</select>
 				</ng-container>
 
 				<!-- checkbox groups -->
 				<ng-container *ngSwitchCase="'checkbox'" [formArrayName]="element.name">
 					<div class="group-label">{{ element.label }}</div>
 					<ng-container *ngFor="let option of element.formArray.controls; let i=index" [formGroupName]="i">
-						<input type="checkbox" formControlName="checked" id="wcaForm{{option.controls.value.value}}">
-						<label for="wcaForm{{option.controls.value.value}}">{{ option.controls.label.value }}</label>
+						<input type="checkbox" formControlName="checked" id="wcaForm{{option.controls.label.value}}">
+						<label for="wcaForm{{option.controls.label.value}}">{{ option.controls.label.value }}</label>
 					</ng-container>
 				</ng-container>
 
 			</ng-container>
 		
-			<p *ngIf="terms" wchEditable="terms">{{ terms }}</p>
+			<p *ngIf="terms" wchEditable="terms" class="terms">{{ terms }}</p>
 
 			<button type="submit" [disabled]="!form.valid || isLoading" *ngIf="submitButtonLabel" wchEditable="submitButtonLabel" class="button button-dark expanded">
 				{{ submitButtonLabel }}

@@ -1,0 +1,97 @@
+{
+  "id": "e8577a0b-877b-4824-a926-810dcc19d4b8",
+  "rev": "14-9483c126843c6f7667af396d3f5a35ea",
+  "name": "WCA form element",
+  "classification": "content-type",
+  "kind": [
+    "standalone"
+  ],
+  "description": "",
+  "status": "ready",
+  "tags": [],
+  "elements": [
+    {
+      "elementType": "text",
+      "label": "name",
+      "key": "name",
+      "required": true,
+      "minLength": 1,
+      "helpText": "The name attribute of the form element from WCA."
+    },
+    {
+      "elementType": "optionselection",
+      "options": [
+        {
+          "label": "text",
+          "selection": "text"
+        },
+        {
+          "label": "email",
+          "selection": "email"
+        },
+        {
+          "label": "password",
+          "selection": "password"
+        },
+        {
+          "label": "radio",
+          "selection": "radio"
+        },
+        {
+          "label": "checkbox",
+          "selection": "checkbox"
+        },
+        {
+          "label": "select",
+          "selection": "select"
+        }
+      ],
+      "label": "type",
+      "key": "type",
+      "required": true,
+      "helpText": "The type attribute of the form element from WCA."
+    },
+    {
+      "elementType": "text",
+      "label": "label",
+      "key": "label",
+      "required": true,
+      "minLength": 1,
+      "helpText": "The label for the form element which shows in the UI."
+    },
+    {
+      "elementType": "text",
+      "label": "value",
+      "key": "value",
+      "required": false,
+      "helpText": "The default value for the form element (often empty)."
+    },
+    {
+      "elementType": "text",
+      "helpText": "The placeholder attribute of the form element, if applicable.",
+      "label": "placeholder",
+      "key": "placeholder"
+    },
+    {
+      "elementType": "toggle",
+      "label": "Is required",
+      "key": "isRequired",
+      "helpText": "Toggle on if this form element is required to be filled out by the user. The @angular/forms Validators.required will be used."
+    },
+    {
+      "elementType": "toggle",
+      "label": "Is email",
+      "key": "isEmail",
+      "helpText": "Toggle on if this form element is an email address. The @angular/forms Validators.email will be used."
+    },
+    {
+      "elementType": "text",
+      "label": "option",
+      "key": "option",
+      "allowMultipleValues": true,
+      "minimumValues": 0,
+      "fieldLabel": "option",
+      "helpText": "For checkboxes, radio button groups, and select dropdowns, add each available value from the WCA form elements as an option."
+    }
+  ]
+}

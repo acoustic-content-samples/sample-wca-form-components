@@ -68,7 +68,7 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 ![copy form URL](/doc/images/copyFormURL.png)
 
 2. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
-3. Create and configure a new **WCA iframe form** on the page:
+3. Create and configure a new **WCA iframe form** on the page. **Note**: Use `https` so the cross-origin iframe can be served from within your WCH site:
 
 ![configure iframe](/doc/images/configureIframe.png)
 

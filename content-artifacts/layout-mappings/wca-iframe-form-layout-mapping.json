@@ -1,0 +1,21 @@
+{
+  "id": "wca-iframe-form-layout-mapping",
+  "rev": "3-dc96c56ffa7d10dcf5c5bbe2bfc9e1b2",
+  "name": "wcaIframeFormLayoutMapping",
+  "classification": "layout-mapping",
+  "type": {
+    "id": "f3ad5fbe-d5b3-457e-a0f4-625e57a5b0a1"
+  },
+  "mappings": [
+    {
+      "defaultLayout": {
+        "id": "wca-iframe-form-layout"
+      },
+      "layouts": [
+        {
+          "id": "wca-iframe-form-layout"
+        }
+      ]
+    }
+  ]
+}

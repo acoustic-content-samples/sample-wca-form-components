@@ -1,0 +1,32 @@
+{
+  "id": "f3ad5fbe-d5b3-457e-a0f4-625e57a5b0a1",
+  "rev": "6-3423d10edf74d7716451ee1012597efb",
+  "name": "WCA iframe form",
+  "classification": "content-type",
+  "kind": [
+    "standalone"
+  ],
+  "description": "",
+  "status": "ready",
+  "tags": [],
+  "elements": [
+    {
+      "elementType": "link",
+      "label": "URL",
+      "key": "url",
+      "required": true
+    },
+    {
+      "elementType": "text",
+      "label": "Height",
+      "key": "height",
+      "helpText": "Height of WCA iframe (e.g. 300px, 100%). If not set, the width defaults to fill available space."
+    },
+    {
+      "elementType": "text",
+      "label": "Width",
+      "key": "width",
+      "helpText": "Width of WCA iframe (e.g. 300px, 100%). If not set, the width defaults to 100%."
+    }
+  ]
+}

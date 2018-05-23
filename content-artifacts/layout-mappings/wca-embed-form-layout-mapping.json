@@ -1,0 +1,21 @@
+{
+  "id": "wca-embed-form-layout-mapping",
+  "rev": "2-9520a8922d937322843082f7e5026afa",
+  "name": "wcaEmbedFormLayoutMapping",
+  "classification": "layout-mapping",
+  "type": {
+    "id": "5f99ae4b-0d9e-4c5b-875d-aaa0a4d1ef33"
+  },
+  "mappings": [
+    {
+      "defaultLayout": {
+        "id": "wca-embed-form-layout"
+      },
+      "layouts": [
+        {
+          "id": "wca-embed-form-layout"
+        }
+      ]
+    }
+  ]
+}

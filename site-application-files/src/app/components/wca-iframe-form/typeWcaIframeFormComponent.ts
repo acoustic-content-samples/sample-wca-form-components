@@ -2,7 +2,7 @@ import {
     RenderingContext
 } from 'ibm-wch-sdk-ng';
 import { Component } from '@angular/core';
-import { AbstractNativeWcaFormComponent } from './abstractNativeWcaFormComponent';
+import { AbstractWcaIframeFormComponent } from './abstractWcaIframeFormComponent';
 
 /** Useful imports */
 // import { map } from 'rxjs/operators/map';
@@ -10,18 +10,18 @@ import { AbstractNativeWcaFormComponent } from './abstractNativeWcaFormComponent
 // import { distinctUntilChanged } from 'rxjs/operators/distinctUntilChanged';
 
 /*
- * @name native WCA form
- * @id 7f4a7353-5132-466c-859c-470e931b0aad
+ * @name WCA iframe form
+ * @id f3ad5fbe-d5b3-457e-a0f4-625e57a5b0a1
  */
 /* TODO uncomment this if you plan to use the component standalone, i.e. not as the basis of a layout.
 @Component({
-  selector: 'app-type-native-wca-form-component',
-  templateUrl: './typeNativeWcaFormComponent.html',
-  styleUrls: ['./typeNativeWcaFormComponent.scss'],
+  selector: 'app-type-wca-iframe-form-component',
+  templateUrl: './typeWcaIframeFormComponent.html',
+  styleUrls: ['./typeWcaIframeFormComponent.scss'],
   preserveWhitespaces: false
 })
 */
-export class TypeNativeWcaFormComponent extends AbstractNativeWcaFormComponent {
+export class TypeWcaIframeFormComponent extends AbstractWcaIframeFormComponent {
 
     /*
      * TODO add custom fields here. These fields should be those

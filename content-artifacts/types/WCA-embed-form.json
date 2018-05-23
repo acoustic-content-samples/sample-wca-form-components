@@ -1,0 +1,66 @@
+{
+  "id": "5f99ae4b-0d9e-4c5b-875d-aaa0a4d1ef33",
+  "rev": "15-beb186efef752547c07c0b1a317959cc",
+  "name": "WCA embed form",
+  "classification": "content-type",
+  "kind": [
+    "standalone"
+  ],
+  "description": "",
+  "status": "ready",
+  "tags": [],
+  "elements": [
+    {
+      "elementType": "text",
+      "label": "Title",
+      "key": "title",
+      "helpText": "This text displays above the form."
+    },
+    {
+      "elementType": "link",
+      "label": "Action URL",
+      "key": "actionUrl",
+      "required": true,
+      "helpText": "This is the POST action URL found on the WCA form HTML."
+    },
+    {
+      "elementType": "text",
+      "label": "Submit button label",
+      "key": "submitButtonLabel",
+      "helpText": "This text shows on the button which submits the form."
+    },
+    {
+      "elementType": "text",
+      "label": "Terms",
+      "key": "terms",
+      "helpText": "This text shows above the submit form button, and can be used to show terms, instructions, or any additional information to the user."
+    },
+    {
+      "elementType": "text",
+      "label": "Success message",
+      "key": "successMessage",
+      "helpText": "This message will be shown to the user upon successful submission of the form."
+    },
+    {
+      "elementType": "text",
+      "label": "Error message",
+      "key": "errorMessage",
+      "helpText": "This message will be shown to the user if there is an error submitting the form."
+    },
+    {
+      "elementType": "reference",
+      "label": "Form elements",
+      "key": "formElements",
+      "required": true,
+      "helpText": "A WCA form element, to display as part of this form. Add multiple elements to build the complete form.",
+      "allowMultipleValues": true,
+      "minimumValues": 1,
+      "fieldLabel": "Form element",
+      "restrictTypes": [
+        {
+          "id": "e8577a0b-877b-4824-a926-810dcc19d4b8"
+        }
+      ]
+    }
+  ]
+}

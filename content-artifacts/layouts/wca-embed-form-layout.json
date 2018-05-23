@@ -1,0 +1,12 @@
+{
+  "id": "wca-embed-form-layout",
+  "rev": "2-18a12bfaccc44927c9c654da386bcb24",
+  "name": "wcaEmbedFormLayout",
+  "classification": "layout",
+  "prerender": false,
+  "thumbnail": {
+    "path": "/dxauth/layoutThumbs/wca-embed-form-layout.jpg"
+  },
+  "template": "wca-embed-form-layout",
+  "templateType": "angular"
+}

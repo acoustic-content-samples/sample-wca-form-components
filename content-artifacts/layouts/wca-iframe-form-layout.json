@@ -1,0 +1,12 @@
+{
+  "id": "wca-iframe-form-layout",
+  "rev": "3-9cbb6eb4e2ccb667e0cb69fed4c5d65b",
+  "name": "wcaIframeFormLayout",
+  "classification": "layout",
+  "prerender": false,
+  "thumbnail": {
+    "path": "/dxauth/layoutThumbs/wca-iframe-form-layout.jpg"
+  },
+  "template": "wca-iframe-form-layout",
+  "templateType": "angular"
+}
