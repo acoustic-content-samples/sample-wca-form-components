@@ -22,13 +22,8 @@ export class WcaIframeFormLayoutComponent extends TypeWcaIframeFormComponent {
 		super();    
 
 		// resize the iframe based on the content item height and width elements
-		this.safeSubscribe(this.onHeight, () => this.resizeIFrame() );
-		this.safeSubscribe(this.onWidth, () => this.resizeIFrame() );
-	}
-
-	resizeIFrame() {
-		this.iframeHeight = this.height ? this.height : '100%';
-		this.iframeWidth = this.width ? this.width : '100%';
+		this.safeSubscribe(this.onHeight, (h) => this.iframeHeight = h ? h : '100%' );
+		this.safeSubscribe(this.onWidth, (w) => this.iframeWidth = w ? w : '100%' );
 	}
 
 }

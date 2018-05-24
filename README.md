@@ -113,7 +113,7 @@ The sample form information:
 
 3. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
 
-4. Create a new **WCA embed form** content item on the page:
+4. Create a new **WCA embed form** content item on the page. **Note**: Use `http` for the "Action URL", so WCA will accept the request:
 
 ![configure embed](/doc/images/configureEmbed.png)
 

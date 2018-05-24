@@ -2,73 +2,49 @@
 	<div class="cell medium-8">
 
 		<div class="titlebar">
-			<div *ngIf="isLoading" class="spinner"></div>
-			<div *ngIf="title" wchEditable="title" class="title">{{ title }}</div>
+			<div *ngIf="title && !isSubmitted" wchEditable="title" class="title">{{ title }}</div>
 		</div>
+		
+		<p *ngIf="submitMessage && isSubmitted" wchEditable="submitMessage" class="submit-msg">{{ submitMessage }}</p>
 
-		<div *ngIf="isSubmitted && successMessage" wchEditable="successMessage" class="success" role="alert">
-			{{ successMessage }}
-        </div>
-
-		<div *ngIf="hasError && errorMessage" wchEditable="errorMessage" class="error" role="alert">
-			{{ errorMessage }}
-        </div>
-
-		<form *ngIf="!isSubmitted" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+		<form ngNoForm [ngClass]="{'hidden':isSubmitted}" method="post" [action]="actionUrl.linkURL" target="_blank" (submit)="onSubmit()">
 
 			<!-- iterate over all the form controls -->
-			<ng-container *ngFor="let element of formData" [ngSwitch]="element.type">
+			<ng-container *ngFor="let element of formData" [ngSwitch]="true">
 
 				<!-- simple default (includes the text type) -->
-				<ng-container *ngSwitchDefault>
-					<label for="wcaForm{{element.name}}">{{ element.label }}</label>
-					<input type="{{element.type}}" formControlName="{{element.name}}" id="wcaForm{{element.name}}" placeholder="{{element.placeholder}}">
-				</ng-container>
+				<div *ngSwitchDefault>
+					<label for="wca_{{ element.name }}">{{ element.label }}</label><span *ngIf="element.isRequired" class="required-star">*</span>
+					<input type="{{ element.type }}" name="{{ element.name }}" id="wca_{{ element.name }}" 
+						[attr.required]="element.isRequired ? '' : null"
+						[attr.placeholder]="element.placeholder ? element.placeholder : null">
+				</div>
 
-				<!-- radio button groups -->
-				<ng-container *ngSwitchCase="'radio'">
-					<div class="group-label">{{ element.label }}</div>
-					<div class="radio-group">
-						<ng-container *ngFor="let option of element.options">
-							<input type="radio" formControlName="{{element.name}}" [value]="option" id="wcaForm{{option}}">
-							<label for="wcaForm{{option}}">{{ option }}</label>
-						</ng-container>
-					</div>
-				</ng-container>
+				<!-- checkbox and radio button groups -->
+				<div *ngSwitchCase="element.type === 'checkbox' || element.type === 'radio'">
+					<div class="group-label">{{ element.label }}<span *ngIf="element.isRequired" class="required-star">*</span></div>
+					<ng-container *ngFor="let option of element.options">
+						<input type="radio" [name]="element.name" [value]="option" id="wcaForm{{option}}" [attr.required]="element.isRequired ? '' : null">
+						<label for="wcaForm{{option}}">{{ option }}</label>
+					</ng-container>
+				</div>
 
 				<!-- select dropdown menus -->
-				<ng-container *ngSwitchCase="'select'">
-					<div class="group-label">{{ element.label }}</div>
-					<select formControlName="{{element.name}}">
+				<div *ngSwitchCase="element.type === 'select'">
+					<label for="wca_{{ element.name }}">{{ element.label }}</label><span *ngIf="element.isRequired" class="required-star">*</span>
+					<select name="{{ element.name }}" id="wca_{{ element.name }}" [attr.required]="element.isRequired ? '' : null">
 						<option value="">Select one</option>
-						<option *ngFor="let option of element.options" [value]="option">{{ option }}</option>
+						<option *ngFor="let option of element.options" value="{{ option }}">{{ option }}</option>
 					</select>
-				</ng-container>
-
-				<!-- checkbox groups -->
-				<ng-container *ngSwitchCase="'checkbox'" [formArrayName]="element.name">
-					<div class="group-label">{{ element.label }}</div>
-					<ng-container *ngFor="let option of element.formArray.controls; let i=index" [formGroupName]="i">
-						<input type="checkbox" formControlName="checked" id="wcaForm{{option.controls.label.value}}">
-						<label for="wcaForm{{option.controls.label.value}}">{{ option.controls.label.value }}</label>
-					</ng-container>
-				</ng-container>
+				</div>
 
 			</ng-container>
-		
+
 			<p *ngIf="terms" wchEditable="terms" class="terms">{{ terms }}</p>
 
-			<button type="submit" [disabled]="!form.valid || isLoading" *ngIf="submitButtonLabel" wchEditable="submitButtonLabel" class="button button-dark expanded">
-				{{ submitButtonLabel }}
-			</button>
+			<input *ngIf="submitButtonLabel" type="submit" value="{{ submitButtonLabel }}" class="button button-dark expanded">
 
 		</form>
-
-		<div class="wca-debug">
-			<!-- Remove this before moving to production -->
-			<p>View the form builder values here:</p>
-			<div>{{ form.value | json}}</div>
-		</div>
 
 	</div>
 </div>

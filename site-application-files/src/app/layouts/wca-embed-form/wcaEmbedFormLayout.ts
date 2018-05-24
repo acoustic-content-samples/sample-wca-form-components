@@ -27,17 +27,18 @@ export class WcaEmbedFormLayoutComponent extends TypeWcaEmbedFormComponent {
 
 	/* holds an array of form data created based on the rendering context, each object has this format:
 		{
-			name: 'EMAIL',                       // the name attribute of the form element from WCA
-			type: 'text',                        // the type attrivute of the form element from WCA, one of text | email | password | radio | checkbox | select
-			label: 'Email address',              // the label for the form element which shows in the UI
-			value: '',                           // the default value for the form element (often an empty string)
-			placeholder: 'name@domain.com',      // the placeholder attribute of the form element
-			options: ['Clothes','No']            // for radio, select, and checkbox types: an array of string for each radio/option/checkbox value in a group
+			name: 'EMAIL',                   // the name attribute of the form element from WCA
+			type: 'text',                    // the type attrivute of the form element from WCA, one of text | email | password | radio | checkbox | select
+			label: 'Email address',          // the label for the form element which shows in the UI
+			value: '',                       // the default value for the form element (often an empty string)
+			placeholder: 'name@domain.com',  // the placeholder attribute of the form element
+			options: ['Clothes','No']        // for radio, select, and checkbox types: an array of string for each radio/option/checkbox value in a group
 		}
 	*/
 	formData: any = [];
 
 	// the angular form to display, based on the data
+	// this is built, but unused, as WCA does not support CORS for AJAX form submission
 	form: FormGroup;
 
 	constructor(private http: HttpClient, private fb: FormBuilder) {
@@ -48,6 +49,11 @@ export class WcaEmbedFormLayoutComponent extends TypeWcaEmbedFormComponent {
 
 		// listen for changes in the form
 		this.safeSubscribe(this.onFormElements, () => this.createForm() );
+	}
+
+	// update status on submit
+	onSubmit() {
+		this.isSubmitted = true;
 	}
 
 	// take the formElements from rendering context and transform them into the simple formData object
@@ -69,8 +75,7 @@ export class WcaEmbedFormLayoutComponent extends TypeWcaEmbedFormComponent {
 				placeholder: element.placeholder.value || '',
 				options: element.option.values || [],
 				formArray: null,
-				isRequired: element.isRequired.value,
-				isEmail: element.isEmail.value,
+				isRequired: element.isRequired.value
 			};
 
 			// checkbox groups should be a form array
@@ -87,7 +92,7 @@ export class WcaEmbedFormLayoutComponent extends TypeWcaEmbedFormComponent {
 				if(formObj.isRequired) {
 					validators.push(Validators.required);
 				}
-				if(formObj.isEmail) {
+				if(formObj.type === 'email') {
 					validators.push(Validators.email);
 				}
 				
@@ -109,7 +114,8 @@ export class WcaEmbedFormLayoutComponent extends TypeWcaEmbedFormComponent {
 	}
 
 	// submit the form to the given POST action URL
-	onSubmit(formValues: any) {
+	// not yet possible with WCA
+	onSubmitAjax(formValues: any) {
 		// start loading the form submission
 		this.isLoading = true;
 		this.hasError = false;

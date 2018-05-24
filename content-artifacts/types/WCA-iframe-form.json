@@ -1,6 +1,6 @@
 {
   "id": "f3ad5fbe-d5b3-457e-a0f4-625e57a5b0a1",
-  "rev": "6-3423d10edf74d7716451ee1012597efb",
+  "rev": "7-f6a35154f1a764d4d34a4e09b2d9bc72",
   "name": "WCA iframe form",
   "classification": "content-type",
   "kind": [
@@ -14,7 +14,8 @@
       "elementType": "link",
       "label": "URL",
       "key": "url",
-      "required": true
+      "required": true,
+      "helpText": "This is the link to your form from WCA. You must use https for the form to load properly."
     },
     {
       "elementType": "text",

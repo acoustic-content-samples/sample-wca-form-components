@@ -15,8 +15,17 @@
 		font-family: 'Vidaloka', georgia, 'Times New Roman', serif;
 	}
 
-	.wca-debug {
-		margin-top: 50px;
+	form.hidden {
+		display: none;
+	}
+
+	label {
+		display: inline;
+	}
+
+	.required-star {
+		color: #cc4b37;
+		margin-left: 5px;
 	}
 
 	.group-label {
@@ -26,10 +35,6 @@
 		font-weight: normal;
 		line-height: 1.8;
 		color: #0a0a0a;
-	}
-
-	.radio-button {
-		float: left;
 	}
 
 	select, option {
@@ -42,35 +47,9 @@
 		font-size: 0.8em;
 	}
 
-	.success {
+	.submit-msg {
 		font-weight: bold;
 		margin-bottom: 20px;
+		text-align: center;
 	}
-
-	.error {
-		color: #cc4b37;
-		font-weight: bold;
-		margin-bottom: 20px;
-	}
-}
-
-.spinner {
-	border: 5px solid black;
-	border-radius: 50%;
-	border-top: 5px solid white;
-	width: 25px;
-	height: 25px;
-	-webkit-animation: spin 2s linear infinite;
-	animation: spin 2s linear infinite;
-	margin-right: 20px;
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }

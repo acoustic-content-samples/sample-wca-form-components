@@ -1,6 +1,6 @@
 {
   "id": "e8577a0b-877b-4824-a926-810dcc19d4b8",
-  "rev": "14-9483c126843c6f7667af396d3f5a35ea",
+  "rev": "16-22e4b0a51f03714db21d57fde2c54f96",
   "name": "WCA form element",
   "classification": "content-type",
   "kind": [
@@ -76,13 +76,7 @@
       "elementType": "toggle",
       "label": "Is required",
       "key": "isRequired",
-      "helpText": "Toggle on if this form element is required to be filled out by the user. The @angular/forms Validators.required will be used."
-    },
-    {
-      "elementType": "toggle",
-      "label": "Is email",
-      "key": "isEmail",
-      "helpText": "Toggle on if this form element is an email address. The @angular/forms Validators.email will be used."
+      "helpText": "Toggle on if this form element is required to be filled out by the user."
     },
     {
       "elementType": "text",

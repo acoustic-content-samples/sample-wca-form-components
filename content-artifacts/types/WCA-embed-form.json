@@ -1,6 +1,6 @@
 {
   "id": "5f99ae4b-0d9e-4c5b-875d-aaa0a4d1ef33",
-  "rev": "15-beb186efef752547c07c0b1a317959cc",
+  "rev": "21-846af0b470922cd7a7c32e3db91a3705",
   "name": "WCA embed form",
   "classification": "content-type",
   "kind": [
@@ -27,7 +27,8 @@
       "elementType": "text",
       "label": "Submit button label",
       "key": "submitButtonLabel",
-      "helpText": "This text shows on the button which submits the form."
+      "helpText": "This text shows on the button which submits the form.",
+      "required": false
     },
     {
       "elementType": "text",
@@ -37,15 +38,9 @@
     },
     {
       "elementType": "text",
-      "label": "Success message",
-      "key": "successMessage",
-      "helpText": "This message will be shown to the user upon successful submission of the form."
-    },
-    {
-      "elementType": "text",
-      "label": "Error message",
-      "key": "errorMessage",
-      "helpText": "This message will be shown to the user if there is an error submitting the form."
+      "helpText": "This message will be shown to the user upon submission of the form. It shows whether or not the request was successful.",
+      "label": "Submit message",
+      "key": "submitMessage"
     },
     {
       "elementType": "reference",
