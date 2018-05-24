@@ -135,7 +135,7 @@ The sample form information:
 
 ![select example](/doc/images/selectExample.png)
 
-- checkbox inputs:
+- checkbox inputs (**Note**: The required field does not work for groups of checkboxes):
 
 ![checkbox example](/doc/images/checkboxExample.png)
 

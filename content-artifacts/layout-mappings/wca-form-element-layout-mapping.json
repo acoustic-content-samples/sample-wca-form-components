@@ -1,0 +1,24 @@
+{
+  "name": "wcaFormElementLayoutMapping",
+  "id": "wca-form-element-layout-mapping",
+  "classification": "layout-mapping",
+  "mappings": [
+    {
+      "defaultLayout": {
+        "name": "wcaFormElementLayout",
+        "id": "wca-form-element-layout"
+      },
+      "layouts": [
+        {
+          "name": "wcaFormElementLayout",
+          "id": "wca-form-element-layout"
+        }
+      ]
+    }
+  ],
+  "rev": "AUCuKIeeqFRpFxnKtlKbffRB4Xm3cM5oSgETGCtfpGI=",
+  "type": {
+    "name": "WCA form element",
+    "id": "e8577a0b-877b-4824-a926-810dcc19d4b8"
+  }
+}

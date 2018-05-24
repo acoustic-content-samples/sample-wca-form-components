@@ -10,35 +10,9 @@
 		<form ngNoForm [ngClass]="{'hidden':isSubmitted}" method="post" [action]="actionUrl.linkURL" target="_blank" (submit)="onSubmit()">
 
 			<!-- iterate over all the form controls -->
-			<ng-container *ngFor="let element of formData" [ngSwitch]="true">
-
-				<!-- simple default (includes the text type) -->
-				<div *ngSwitchDefault>
-					<label for="wca_{{ element.name }}">{{ element.label }}</label><span *ngIf="element.isRequired" class="required-star">*</span>
-					<input type="{{ element.type }}" name="{{ element.name }}" id="wca_{{ element.name }}" 
-						[attr.required]="element.isRequired ? '' : null"
-						[attr.placeholder]="element.placeholder ? element.placeholder : null">
-				</div>
-
-				<!-- checkbox and radio button groups -->
-				<div *ngSwitchCase="element.type === 'checkbox' || element.type === 'radio'">
-					<div class="group-label">{{ element.label }}<span *ngIf="element.isRequired" class="required-star">*</span></div>
-					<ng-container *ngFor="let option of element.options">
-						<input type="radio" [name]="element.name" [value]="option" id="wcaForm{{option}}" [attr.required]="element.isRequired ? '' : null">
-						<label for="wcaForm{{option}}">{{ option }}</label>
-					</ng-container>
-				</div>
-
-				<!-- select dropdown menus -->
-				<div *ngSwitchCase="element.type === 'select'">
-					<label for="wca_{{ element.name }}">{{ element.label }}</label><span *ngIf="element.isRequired" class="required-star">*</span>
-					<select name="{{ element.name }}" id="wca_{{ element.name }}" [attr.required]="element.isRequired ? '' : null">
-						<option value="">Select one</option>
-						<option *ngFor="let option of element.options" value="{{ option }}">{{ option }}</option>
-					</select>
-				</div>
-
-			</ng-container>
+            <ng-container *ngFor="let e of formElements; trackBy: trackByComponentId">
+                <wch-contentref [renderingContext]="e"></wch-contentref>
+            </ng-container>
 
 			<p *ngIf="terms" wchEditable="terms" class="terms">{{ terms }}</p>
 

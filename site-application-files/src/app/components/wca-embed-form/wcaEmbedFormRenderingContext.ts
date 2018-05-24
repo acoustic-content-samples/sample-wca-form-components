@@ -8,7 +8,7 @@ import {
     SingleLinkElement,
     RenderingContext
 } from 'ibm-wch-sdk-ng';
-import { KEY_ACTION_URL, KEY_ERROR_MESSAGE, KEY_FORM_ELEMENTS, KEY_SUBMIT_BUTTON_LABEL, KEY_TERMS, KEY_TITLE, WcaEmbedForm, isWcaEmbedForm } from './../../elements/wca-embed-form/wcaEmbedFormType';
+import { KEY_ACTION_URL, KEY_FORM_ELEMENTS, KEY_SUBMIT_BUTTON_LABEL, KEY_SUBMIT_MESSAGE, KEY_TERMS, KEY_TITLE, WcaEmbedForm, isWcaEmbedForm } from './../../elements/wca-embed-form/wcaEmbedFormType';
 
 /*
  * @name WCA embed form
@@ -52,7 +52,8 @@ export interface WcaEmbedFormRenderingContext extends RenderingContext {
      *   "elementType": "text",
      *   "helpText": "This text shows on the button which submits the form.",
      *   "key": "submitButtonLabel",
-     *   "label": "Submit button label"
+     *   "label": "Submit button label",
+     *   "required": false
      * }
     */
     ['submitButtonLabel']?: string;
@@ -68,12 +69,12 @@ export interface WcaEmbedFormRenderingContext extends RenderingContext {
     /**
      * {
      *   "elementType": "text",
-     *   "helpText": "This message will be shown to the user if there is an error submitting the form.",
-     *   "key": "errorMessage",
-     *   "label": "Error message"
+     *   "helpText": "This message will be shown to the user upon submission of the form. It shows whether or not the request was successful.",
+     *   "key": "submitMessage",
+     *   "label": "Submit message"
      * }
     */
-    ['errorMessage']?: string;
+    ['submitMessage']?: string;
     };
 
     link: {

@@ -1,0 +1,50 @@
+<ng-container [ngSwitch]="true">
+
+	<!-- simple default (includes the text type) -->
+	<div *ngSwitchDefault>
+
+		<label for="wca_{{ name }}" wchEditable="label">{{ label }}</label>
+		<span *ngIf="isRequired" class="required-star">*</span>
+
+		<input [type]="type.selection" [name]="name" id="wca_{{ name }}"
+			[attr.value]="value ? value : null"
+			[attr.required]="isRequired ? '' : null"
+			[attr.placeholder]="placeholder ? placeholder : null"
+		>
+
+	</div>
+
+
+	<!-- checkbox and radio button groups -->
+	<div *ngSwitchCase="type.selection === 'checkbox' || type.selection === 'radio'">
+
+		<div class="group-label" wchEditable="label">
+			{{ label }}
+			<span *ngIf="isRequired" class="required-star">*</span>
+		</div>
+
+		<ng-container *ngFor="let o of option; let i = index">
+			<input [type]="type.selection" [name]="name" [value]="o" id="wca_{{name}}_{{i}}"  
+				[attr.checked]="o === value ? '' : null"
+				[attr.required]="isRequired ? '' : null"
+			>
+			<label for="wca_{{name}}_{{i}}">{{ o }}</label>
+		</ng-container>
+
+	</div>
+
+
+	<!-- select dropdown menus -->
+	<div *ngSwitchCase="type.selection === 'select'">
+
+		<label for="wca_{{ name }}" wchEditable="label">{{ label }}</label>
+		<span *ngIf="isRequired" class="required-star">*</span>
+
+		<select [name]="name" id="wca_{{ name }}" [attr.required]="isRequired ? '' : null">
+			<option value="">Select one</option>
+			<option *ngFor="let o of option; let i = index" [value]="o" [attr.selected]="o === value ? '' : null">{{ o }}</option>
+		</select>
+
+	</div>
+
+</ng-container>

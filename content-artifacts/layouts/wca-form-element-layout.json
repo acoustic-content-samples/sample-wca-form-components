@@ -1,0 +1,12 @@
+{
+  "name": "wcaFormElementLayout",
+  "id": "wca-form-element-layout",
+  "classification": "layout",
+  "prerender": false,
+  "rev": "kQliUZi2v5yDrrrshQVk84nRZ3ifWqt7JWbW/4IHCgY=",
+  "template": "wca-form-element-layout",
+  "templateType": "angular",
+  "thumbnail": {
+    "path": "/dxauth/layoutThumbs/wca-form-element-layout.jpg"
+  }
+}

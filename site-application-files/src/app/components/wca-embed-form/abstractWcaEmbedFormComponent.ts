@@ -63,10 +63,11 @@ abstract class AbstractWcaEmbedFormComponent extends AbstractRenderingComponent 
      *   "elementType": "text",
      *   "helpText": "This text shows on the button which submits the form.",
      *   "key": "submitButtonLabel",
-     *   "label": "Submit button label"
+     *   "label": "Submit button label",
+     *   "required": false
      * }
      */
-    @RenderingContextBinding('text.submitButtonLabel', 'Submit')
+    @RenderingContextBinding('text.submitButtonLabel', '')
     readonly onSubmitButtonLabel: Observable<string>;
 
     /*
@@ -95,9 +96,9 @@ abstract class AbstractWcaEmbedFormComponent extends AbstractRenderingComponent 
     /*
      * {
      *   "elementType": "text",
-     *   "helpText": "This message will be shown to the user upon successful submission of the form.",
+     *   "helpText": "This message will be shown to the user upon submission of the form. It shows whether or not the request was successful.",
      *   "key": "submitMessage",
-     *   "label": "Success message"
+     *   "label": "Submit message"
      * }
      */
     @RenderingContextBinding('text.submitMessage', '')

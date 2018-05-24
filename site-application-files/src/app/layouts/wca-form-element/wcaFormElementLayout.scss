@@ -1,0 +1,21 @@
+label {
+	display: inline;
+}
+
+.required-star {
+	color: #cc4b37;
+	margin-left: 5px;
+}
+
+.group-label {
+	display: block;
+	margin: 0;
+	font-size: 0.875rem;
+	font-weight: normal;
+	line-height: 1.8;
+	color: #0a0a0a;
+}
+
+select, option {
+	font-size: 0.875rem;
+}
