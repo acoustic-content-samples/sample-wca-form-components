@@ -1,25 +1,24 @@
 {
-  "name": "wcaEmbedFormLayoutMapping",
   "id": "wca-embed-form-layout-mapping",
+  "rev": "3-a9d547357de8dcc6feddb7c163e7636c",
+  "name": "wcaEmbedFormLayoutMapping",
   "classification": "layout-mapping",
+  "type": {
+    "id": "5f99ae4b-0d9e-4c5b-875d-aaa0a4d1ef33",
+    "name": "WCA embed form"
+  },
   "mappings": [
     {
       "defaultLayout": {
-        "id": "wca-embed-form-layout"
+        "id": "wca-embed-form-layout",
+        "name": "wcaEmbedFormLayout"
       },
       "layouts": [
         {
-          "id": "wca-embed-form-layout"
-        },
-        {
-          "name": "redo",
-          "id": "redo"
+          "id": "wca-embed-form-layout",
+          "name": "wcaEmbedFormLayout"
         }
       ]
     }
-  ],
-  "rev": "2-9520a8922d937322843082f7e5026afa",
-  "type": {
-    "id": "5f99ae4b-0d9e-4c5b-875d-aaa0a4d1ef33"
-  }
+  ]
 }

@@ -1,19 +1,22 @@
 {
   "id": "wca-iframe-form-layout-mapping",
-  "rev": "27-499b7df7effe6a5048d650c3c8765810",
+  "rev": "3-1f1dd59fc3bd287cfd06665daf646d5b",
   "name": "wcaIframeFormLayoutMapping",
   "classification": "layout-mapping",
   "type": {
-    "id": "f3ad5fbe-d5b3-457e-a0f4-625e57a5b0a1"
+    "id": "f3ad5fbe-d5b3-457e-a0f4-625e57a5b0a1",
+    "name": "WCA iframe form"
   },
   "mappings": [
     {
       "defaultLayout": {
-        "id": "wca-iframe-form-layout"
+        "id": "wca-iframe-form-layout",
+        "name": "wcaIframeFormLayout"
       },
       "layouts": [
         {
-          "id": "wca-iframe-form-layout"
+          "id": "wca-iframe-form-layout",
+          "name": "wcaIframeFormLayout"
         }
       ]
     }

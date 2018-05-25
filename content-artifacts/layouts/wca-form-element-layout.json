@@ -1,12 +1,13 @@
 {
-  "name": "wcaFormElementLayout",
   "id": "wca-form-element-layout",
+  "rev": "3-60ea716dd63a41880369590505725c41",
+  "name": "wcaFormElementLayout",
   "classification": "layout",
   "prerender": false,
-  "rev": "kQliUZi2v5yDrrrshQVk84nRZ3ifWqt7JWbW/4IHCgY=",
-  "template": "wca-form-element-layout",
-  "templateType": "angular",
   "thumbnail": {
-    "path": "/dxauth/layoutThumbs/wca-form-element-layout.jpg"
-  }
+    "path": "/dxauth/layoutThumbs/wca-form-element-layout.jpg",
+    "url": "/authoring/v1/resources/a9b7575381cd03962dbe81e4116c8663_12cfecc6b1ef95fec1334fa766a0ff29"
+  },
+  "template": "wca-form-element-layout",
+  "templateType": "angular"
 }

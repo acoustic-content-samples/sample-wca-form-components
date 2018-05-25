@@ -1,11 +1,12 @@
 {
   "id": "wca-iframe-form-layout",
-  "rev": "25-fd1c24dbd5d4f7ecdce9c21eddeb98c8",
+  "rev": "3-41f2dc88f91205a85adb54a89dc462c0",
   "name": "wcaIframeFormLayout",
   "classification": "layout",
   "prerender": false,
   "thumbnail": {
-    "path": "/dxauth/layoutThumbs/wca-iframe-form-layout.jpg"
+    "path": "/dxauth/layoutThumbs/wca-iframe-form-layout.jpg",
+    "url": "/authoring/v1/resources/a9b7575381cd03962dbe81e4116c8663_f91b36c741178e6954bb8303ed893b10"
   },
   "template": "wca-iframe-form-layout",
   "templateType": "angular"

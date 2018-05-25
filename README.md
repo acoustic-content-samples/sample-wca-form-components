@@ -18,13 +18,13 @@ This repository contains a set of sample site components to showcase how to inte
 - [License](#license)
 
 ## Introduction
-This sample repository provides two example plugin components for your WCH site. It includes an iframe component, and a embedded WCA form component. With the iframe component, you can display any WCA form in an iframe window. With the embedded form component, you can configure your WCA forms using WCH content items.  To enable these 2 components, you have to install the packages _content-artifacts_ and package _site-application-files_ by following the steps below.
+This sample repository provides two example plugin components for your WCH site. It includes an iframe component, and an embedded WCA form component. With the iframe component, you can display any WCA form in an iframe window. With the embedded form component, you can build your WCA forms using WCH content items.  To enable these 2 components, just install the packages from this repository by following the steps below.
 
 ## Sample screenshots
-See the end result for each form inclusion technique:
-### iframe component
+See the end result for each of the two samples:
+### WCA iframe form component
 ![iframe example](/doc/images/iframeExample.png)
-### Embed form component
+### WCA embed form component
 ![embed example](/doc/images/embedExample.png)
 
 ## Prerequisites
@@ -36,7 +36,7 @@ See the end result for each form inclusion technique:
 ## Install and deploy the sample
 
 ### Configure your wchtools
-1. Get your WCH tenant API URL by copying it from your WCH homepage -> **your username** on top bar -> Hub information -> API URL -> Copy to clipboard
+1. Get your WCH tenant API URL by copying it from your WCH homepage -> **your username** on the header -> Hub information -> API URL -> Copy to clipboard
 2. Run `wchtools init` in your command line. Enter your username and API URL to configure wchtools.
 
 ### Clone and install the sample content-artifacts and site-application-files
@@ -47,18 +47,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 ```
 
 ### Build and deploy your components
-1. Open _src/app/app.module.ts_ in the _wch-site-application_ directory, and import the `ReactiveFormsModule` module:
-```
-import {FormsModule,ReactiveFormsModule} from '@angular/forms';
-
-@NgModule({
-	imports: [
-		FormsModule,
-		ReactiveFormsModule
-	]
-})
-```
-2. From within the _wch-site-application_ directory run:
+1. From within the _wch-site-application_ directory run:
 	- `npm run build` to compile the project. Make sure there is no error during the build process.
 	- `npm run deploy` to your WCH tenant.
 

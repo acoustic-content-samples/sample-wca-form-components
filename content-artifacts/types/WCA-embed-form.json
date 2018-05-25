@@ -1,6 +1,6 @@
 {
   "id": "5f99ae4b-0d9e-4c5b-875d-aaa0a4d1ef33",
-  "rev": "21-846af0b470922cd7a7c32e3db91a3705",
+  "rev": "3-81b3450257391794500d6cba982bfa21",
   "name": "WCA embed form",
   "classification": "content-type",
   "kind": [
@@ -53,7 +53,8 @@
       "fieldLabel": "Form element",
       "restrictTypes": [
         {
-          "id": "e8577a0b-877b-4824-a926-810dcc19d4b8"
+          "id": "e8577a0b-877b-4824-a926-810dcc19d4b8",
+          "name": "WCA form element"
         }
       ]
     }
