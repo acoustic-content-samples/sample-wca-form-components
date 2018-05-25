@@ -80,7 +80,7 @@ The sample form information:
 * **Action URL**: _http://www.sample.net/org/sports/sign-up_
 * **Submit button label**: Sign up
 * **Terms**: Sign up to get the best deals with our weekly email newsletter.
-* **Error message**: Sorry! We could not sign you up, please try again.
+* **Submit message**: Thanks for signing up!
 * **Form elements** and **option**s:
 
 | **name**  | **type**  | **label**   | **value** | **placeholder** | **Is required**? | **Is email**? | **option**           |
