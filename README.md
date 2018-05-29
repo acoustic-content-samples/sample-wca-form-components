@@ -5,12 +5,12 @@ This repository contains a set of sample site components to showcase how to inte
 ## Table of contents
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
-- [Sample Screenshots](#sample-screenshots)
+- [Sample screenshots](#sample-screenshots)
 - [Prerequisites](#prerequisites)
 - [Install and deploy the sample](#install-and-deploy-the-sample)
   - [Configure your wchtools](#configure-your-wchtools)
-  - [Install the package content-artifacts and  site-application-files](#clone-and-install-the-sample-content-artifacts-and-site-application-files)
-  - [Build and Deploy your components](#build-and-deploy-your-components)
+  - [Clone and install the sample content-artifacts and site-application-files](#clone-and-install-the-sample-content-artifacts-and-site-application-files)
+  - [Build and deploy your components](#build-and-deploy-your-components)
 - [Add an iframe form to a page](#add-an-iframe-form-to-a-page)
 - [Add an embedded form to a page](#add-an-embedded-form-to-a-page)
 - [Samples go live](#samples-go-live)
@@ -18,7 +18,7 @@ This repository contains a set of sample site components to showcase how to inte
 - [License](#license)
 
 ## Introduction
-This sample repository provides two example plugin components for your WCH site. It includes an iframe component, and an embedded WCA form component. With the iframe component, you can display any WCA form in an iframe window. With the embedded form component, you can build your WCA forms using WCH content items.  To enable these 2 components, just install the packages from this repository by following the steps below.
+This sample repository provides two example plugin components for your WCH site. It includes iframe and embedded WCA form components. With the iframe component, you can display any WCA form in an iframe window. With the embedded form component, you can build your WCA forms using WCH content items.  To enable these 2 components, just install the packages from this repository by following the steps below.
 
 ## Sample screenshots
 See the end result for each of the two samples:
@@ -77,7 +77,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 The sample form information:
 * **Title**: Sign up here!
-* **Action URL**: _http://www.sample.net/org/sports/sign-up_
+* **Action URL**: http://www.sample.net/org/sports/sign-up
 * **Submit button label**: Sign up
 * **Terms**: Sign up to get the best deals with our weekly email newsletter.
 * **Submit message**: Thanks for signing up!
@@ -102,7 +102,7 @@ The sample form information:
 
 3. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
 
-4. Create a new **WCA embed form** content item on the page. **Note**: Use `http` for the "Action URL", so WCA will accept the request:
+4. Create a new **WCA embed form** content item on the page. **Note**: Use a fully qualified `http` link for the "Action URL", so WCA will accept the request:
 
 ![configure embed](/doc/images/configureEmbed.png)
 
@@ -133,15 +133,16 @@ The sample form information:
 ![embed example](/doc/images/embedExample.png)
 
 ## Samples go live
-1. Go to Your WCH homepage -> YOUR USERNAME on the top bar -> Hub information.
-2. You could view your newest site by clicking "Live site".
+1. Ensure your new pages and content items are published.
+2. Go to your WCH homepage -> **your username** on the header -> Hub information.
+3. View your published site by clicking "Live site".
 
 ### Advanced customization of the WCA form component
 If you would like to add additional features or updated styling to your WCA form:
 1. Open _src/app/layouts/wca-embed-form_ in the _wch-site-application_ directory.
 2. Edit the html, scss and ts files.
 3. Use the [development server](https://github.com/ibm-wch/wch-site-application#changing-the-tenant), if desired.
-4. From within the wch-site-application directory run `npm run build-deploy`
+4. When you're done editing, run `npm run build-deploy` from within the wch-site-application directory.
 
 ## License
 See the included license file [License](license.txt).
