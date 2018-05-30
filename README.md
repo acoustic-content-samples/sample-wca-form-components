@@ -29,7 +29,7 @@ See the end result for each of the two samples:
 
 ## Prerequisites
 * A WCH tenant in Trial or Standard Tier
-* Latest wch-site-application source (see: https://github.com/ibm-wch/wch-site-application)
+* **Latest** [wch-site-application source](https://github.com/ibm-wch/wch-site-application)
 * wchtools-cli v2.0.3 or above
 * Node.js v6.11.1 or above
 
@@ -68,65 +68,111 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ## Add an embedded form to a page
 
-1. Go directly to your WCA form in a browser:
+1. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
 
-![form](/doc/images/form.png)
-
-2. Inspect the form using your developer tools to get the POST action url (ignore URL parameters), the form input fields, and corresponding options:
-
-![form inputs](/doc/images/formInputs.png)
-
-The sample form information:
-* **Title**: Sign up here!
-* **Action URL**: http://www.sample.net/org/sports/sign-up (**Note**: must be an `http` URL)
-* **Submit button label**: Sign up
-* **Terms**: Sign up to get the best deals with our weekly email newsletter.
-* **Submit message**: Thanks for signing up!
-* **Form elements** and **option**s:
-
-| **name**  | **type**  | **label**   | **value** | **placeholder** | **Is required**? | **Is email**? | **option**           |
-| --------- | --------- | ----------- | --------- | --------------- | ---------------- | ------------- | -------------------- |
-| COLUMN22  | text      | First Name  |           |                 |                  |               |                      |
-| EMAIL     | email     | Email       |           | name@domain.com | yes              | yes           |                      |
-| COLUMN92  | radio     | New Player  | Yes       |                 |                  |               | Yes                  |
-| "         | "         | "           |           |                 |                  |               | No                   |
-| COLUMN94  | select    | Age Range   |           |                 |                  |               | 18-24                |
-| "         | "         | "           |           |                 |                  |               | 35-50                |
-| "         | "         | "           |           |                 |                  |               | 51-65                |
-| "         | "         | "           |           |                 |                  |               | 66-80                |
-| "         | "         | "           |           |                 |                  |               | 81+                  |
-| COLUMN111 | checkbox  | Interests   |           |                 |                  |               | Team Sports          |
-| "         | "         | "           |           |                 |                  |               | Roller Sports        |
-| "         | "         | "           |           |                 |                  |               | Fishing & Hunting    |
-| "         | "         | "           |           |                 |                  |               | Games & Toys         |
-| "         | "         | "           |           |                 |                  |               | Golf & Racket Sports |
-
-3. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
-
-4. Create a new **WCA embed form** content item on the page.
+2. Create a new **WCA embed form** content item on the page.
 **Important**: Use a fully qualified `http` link for the "Action URL", so WCA will accept the request:
 
 ![configure embed](/doc/images/configureEmbed.png)
 
-5. Compose a new **WCA form element** to the content item, for each form element:
+3. Go directly to your WCA form in a browser:
 
-- text input:
+![form](/doc/images/form.png)
+
+4. Inspect the form using your developer tools to get the POST action url (ignore URL parameters), the form input fields and options:
+
+![form inputs](/doc/images/formInputs.png)
+
+5. For each form element, compose a new **WCA form element** in your **WCA embed form** content item:
+
+- Text input:
+```
+<input name="COLUMN22" type="text" label="First Name">
+```
 
 ![text example](/doc/images/textExample.png)
 
-- email input:
+- A required email input with a placeholder:
+```
+<input name="EMAIL" type="email" label="Email" placeholder="name@domain.com" required>
+```
+**Note**: The placeholder field can be used for any text-based input.
 
 ![email example](/doc/images/emailExample.png)
 
-- radio group input:
+- Add an option in the **WCA form element** for each radio button `value` in the group:
+```
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<input name="COLUMN92" type="radio" label="New Player" value="Yes" checked="">
+			</td>
+			<td>Yes</td>
+			<td>
+				<input name="COLUMN92" type="radio" label="New Player" value="No">
+			</td>
+			<td>No</td>
+		</tr>
+	</tbody>
+</table>
+```
+**Note**: To make one of your radio buttons selected by default, set its `value` in the **WCA form element**. For example, here the radio button with the "Yes" `value` is `checked`, so "Yes" should be the `value` for the radio button group:
 
 ![radio example](/doc/images/radioExample.png)
 
-- select dropdown input:
+- Add an option for each `value` in the `select` drop-down:
+```
+<select name="COLUMN94" label="Age Range">
+	<option>Select one</option>
+	<option value="18-34">18-34</option>
+	<option value="35-50">35-50</option>
+	<option value="51-65">51-65</option>
+	<option value="66-80">66-80</option>
+	<option value="81+">81+</option>
+</select>
+```
 
 ![select example](/doc/images/selectExample.png)
 
-- checkbox inputs (**Note**: The required field does not work for groups of checkboxes):
+- Add an option for each `value` in the group of checkboxes:
+```
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<input name="COLUMN111" type="checkbox" label="Interests" value="Team Sports">
+				<label>Team Sports</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input name="COLUMN111" type="checkbox" label="Interests" value="Roller Sports">
+				<label>Roller Sports</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input name="COLUMN111" type="checkbox" label="Interests" value="Fishing & Hunting">
+				<label>Fishing & Hunting</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input name="COLUMN111" type="checkbox" label="Interests" value="Games & Toys">
+				<label>Games & Toys</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input name="COLUMN111" type="checkbox" label="Interests" value="Golf & Racket Sports">
+				<label>Golf & Racket Sports</label>
+			</td>
+		</tr>
+	</tbody>
+</table>
+```
+**Note**: The required field can be used for all input types except checkbox groups.
 
 ![checkbox example](/doc/images/checkboxExample.png)
 
