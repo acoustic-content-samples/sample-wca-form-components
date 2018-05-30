@@ -57,7 +57,8 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 ![copy form URL](/doc/images/copyFormURL.png)
 
 2. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
-3. Create and configure a new **WCA iframe form** on the page. **Note**: Use `https` so the cross-origin iframe can be served from within your WCH site:
+3. Create and configure a new **WCA iframe form** on the page.
+**Important**: Use `https` so the cross-origin iframe can be served from within your WCH site:
 
 ![configure iframe](/doc/images/configureIframe.png)
 
@@ -77,7 +78,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 The sample form information:
 * **Title**: Sign up here!
-* **Action URL**: http://www.sample.net/org/sports/sign-up
+* **Action URL**: http://www.sample.net/org/sports/sign-up (**Note**: must be an `http` URL)
 * **Submit button label**: Sign up
 * **Terms**: Sign up to get the best deals with our weekly email newsletter.
 * **Submit message**: Thanks for signing up!
@@ -102,7 +103,8 @@ The sample form information:
 
 3. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
 
-4. Create a new **WCA embed form** content item on the page. **Note**: Use a fully qualified `http` link for the "Action URL", so WCA will accept the request:
+4. Create a new **WCA embed form** content item on the page.
+**Important**: Use a fully qualified `http` link for the "Action URL", so WCA will accept the request:
 
 ![configure embed](/doc/images/configureEmbed.png)
 
