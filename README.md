@@ -103,18 +103,18 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 - Add an option in the **WCA form element** for each radio button `value` in the group:
 ```
 <table>
-	<tbody>
-		<tr>
-			<td>
-				<input name="COLUMN92" type="radio" label="New Player" value="Yes" checked="">
-			</td>
-			<td>Yes</td>
-			<td>
-				<input name="COLUMN92" type="radio" label="New Player" value="No">
-			</td>
-			<td>No</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <td>
+        <input name="COLUMN92" type="radio" label="New Player" value="Yes" checked="">
+      </td>
+      <td>Yes</td>
+      <td>
+        <input name="COLUMN92" type="radio" label="New Player" value="No">
+      </td>
+      <td>No</td>
+    </tr>
+  </tbody>
 </table>
 ```
 **Note**: To make one of your radio buttons selected by default, set its `value` in the **WCA form element**. For example, here the radio button with the "Yes" `value` is `checked`, so "Yes" should be the `value` for the radio button group:
@@ -124,12 +124,12 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 - Add an option for each `value` in the `select` drop-down:
 ```
 <select name="COLUMN94" label="Age Range">
-	<option>Select one</option>
-	<option value="18-34">18-34</option>
-	<option value="35-50">35-50</option>
-	<option value="51-65">51-65</option>
-	<option value="66-80">66-80</option>
-	<option value="81+">81+</option>
+  <option>Select one</option>
+  <option value="18-34">18-34</option>
+  <option value="35-50">35-50</option>
+  <option value="51-65">51-65</option>
+  <option value="66-80">66-80</option>
+  <option value="81+">81+</option>
 </select>
 ```
 
@@ -138,38 +138,38 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 - Add an option for each `value` in the group of checkboxes:
 ```
 <table>
-	<tbody>
-		<tr>
-			<td>
-				<input name="COLUMN111" type="checkbox" label="Interests" value="Team Sports">
-				<label>Team Sports</label>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input name="COLUMN111" type="checkbox" label="Interests" value="Roller Sports">
-				<label>Roller Sports</label>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input name="COLUMN111" type="checkbox" label="Interests" value="Fishing & Hunting">
-				<label>Fishing & Hunting</label>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input name="COLUMN111" type="checkbox" label="Interests" value="Games & Toys">
-				<label>Games & Toys</label>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<input name="COLUMN111" type="checkbox" label="Interests" value="Golf & Racket Sports">
-				<label>Golf & Racket Sports</label>
-			</td>
-		</tr>
-	</tbody>
+  <tbody>
+    <tr>
+      <td>
+        <input name="COLUMN111" type="checkbox" label="Interests" value="Team Sports">
+        <label>Team Sports</label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input name="COLUMN111" type="checkbox" label="Interests" value="Roller Sports">
+        <label>Roller Sports</label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input name="COLUMN111" type="checkbox" label="Interests" value="Fishing & Hunting">
+        <label>Fishing & Hunting</label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input name="COLUMN111" type="checkbox" label="Interests" value="Games & Toys">
+        <label>Games & Toys</label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input name="COLUMN111" type="checkbox" label="Interests" value="Golf & Racket Sports">
+        <label>Golf & Racket Sports</label>
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 **Note**: The required field can be used for all input types except checkbox groups.
