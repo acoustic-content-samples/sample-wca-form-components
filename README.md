@@ -79,7 +79,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![Open results in a new tab](/doc/images/openResultsPage.png)
 
-Leaving the toggle off displays the results in the current browser window. Due to cross-site security limitations in WCA, displaying this results page (either in the current or a new tab) cannot be prevented altogether. In order to make this flow more user-friendly, a best practice would be to include a link back to WCH from the WCA results page:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Leaving the toggle off displays the results in the current browser window. Due to cross-site security limitations in WCA, displaying this results page (either in the current or a new tab) cannot be prevented altogether. In order to make this flow more user-friendly, a best practice would be to include a link back to WCH from the WCA results page:
 
 ![Link to go back to WCH](/doc/images/goBack.png)
 
@@ -93,22 +93,22 @@ Leaving the toggle off displays the results in the current browser window. Due t
 
 6. For each form element, compose a new **WCA form element** in your **WCA embed form** content item:
 
-- Text input:
+	- Text input:
 ```
 <input name="COLUMN22" type="text" label="First Name">
 ```
 
 ![text example](/doc/images/textExample.png)
 
-- A required email input with a placeholder:
+	- A required email input with a placeholder:
 ```
 <input name="EMAIL" type="email" label="Email" placeholder="name@domain.com" required>
 ```
-**Note**: The placeholder field can be used for any text-based input.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note**: The placeholder field can be used for any text-based input.
 
 ![email example](/doc/images/emailExample.png)
 
-- Add an option in the **WCA form element** for each radio button `value` in the group:
+	- Add an option in the **WCA form element** for each radio button `value` in the group:
 ```
 <table>
   <tbody>
@@ -125,11 +125,11 @@ Leaving the toggle off displays the results in the current browser window. Due t
   </tbody>
 </table>
 ```
-**Note**: To make one of your radio buttons selected by default, set its `value` in the **WCA form element**. For example, here the radio button with the "Yes" `value` is `checked`, so "Yes" should be the `value` for the radio button group:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note**: To make one of your radio buttons selected by default, set its `value` in the **WCA form element**. For example, here the radio button with the "Yes" `value` is `checked`, so "Yes" should be the `value` for the radio button group:
 
 ![radio example](/doc/images/radioExample.png)
 
-- Add an option for each `value` in the `select` drop-down:
+	- Add an option for each `value` in the `select` drop-down:
 ```
 <select name="COLUMN94" label="Age Range">
   <option>Select one</option>
@@ -143,7 +143,7 @@ Leaving the toggle off displays the results in the current browser window. Due t
 
 ![select example](/doc/images/selectExample.png)
 
-- Add an option for each `value` in the group of checkboxes:
+	- Add an option for each `value` in the group of checkboxes:
 ```
 <table>
   <tbody>
@@ -180,7 +180,7 @@ Leaving the toggle off displays the results in the current browser window. Due t
   </tbody>
 </table>
 ```
-**Note**: The required field can be used for all input types except checkbox groups.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Note**: The required field can be used for all input types except checkbox groups.
 
 ![checkbox example](/doc/images/checkboxExample.png)
 
