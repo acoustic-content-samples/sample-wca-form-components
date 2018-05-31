@@ -76,8 +76,11 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 ![configure embed](/doc/images/configureEmbed.png)
 
 3. (Optional) If you want the form to display the results from WCA in a new browser tab upon form submission, turn on the "Open results tab" toggle:
+
 ![Open results in a new tab](/doc/images/openResultsPage.png)
+
 Leaving the toggle off displays the results in the current browser window. Due to cross-site security limitations in WCA, displaying this results page (either in the current or a new tab) cannot be prevented altogether. In order to make this flow more user-friendly, a best practice would be to include a link back to WCH from the WCA results page:
+
 ![Link to go back to WCH](/doc/images/goBack.png)
 
 4. Go directly to your WCA form in a browser:
