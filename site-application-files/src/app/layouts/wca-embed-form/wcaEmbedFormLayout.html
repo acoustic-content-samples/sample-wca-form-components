@@ -7,7 +7,7 @@
 		
 		<p *ngIf="submitMessage && isSubmitted" wchEditable="submitMessage" class="submit-msg">{{ submitMessage }}</p>
 
-		<form ngNoForm [ngClass]="{'hidden':isSubmitted}" method="post" [action]="actionUrl.linkURL" target="_blank" (submit)="onSubmit()">
+		<form ngNoForm [ngClass]="{'hidden':isSubmitted}" method="post" [action]="actionUrl.linkURL" [attr.target]="openResultsTab ? '_blank' : null" (submit)="onSubmit()">
 
 			<!-- iterate over all the form controls -->
             <ng-container *ngFor="let e of formElements; trackBy: trackByComponentId">

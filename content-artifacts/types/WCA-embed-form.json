@@ -43,6 +43,13 @@
       "key": "submitMessage"
     },
     {
+      "elementType": "toggle",
+      "label": "Open results tab",
+      "key": "openResultsTab",
+      "helpText": "Toggle this on if you would like a new browser tab to open and display database results from WCA upon form submission. Otherwise, the results will open in the current browser window.",
+      "statement": "Turn on to open WCA form results in a new tab."
+    },
+    {
       "elementType": "reference",
       "label": "Form elements",
       "key": "formElements",

@@ -1,13 +1,14 @@
 /**
  * Do not modify this file, it is auto-generated.
  */
-import { GroupElement, Link, MultiReferenceElement, RenderingContext, SingleLinkElement, SingleTextElement, isMultiGroupElement, isMultiReferenceElement, isSingleGroupElement, isSingleLinkElement, isSingleTextElement } from 'ibm-wch-sdk-ng';
+import { GroupElement, Link, MultiReferenceElement, RenderingContext, SingleLinkElement, SingleTextElement, SingleToggleElement, isMultiGroupElement, isMultiReferenceElement, isSingleGroupElement, isSingleLinkElement, isSingleTextElement, isSingleToggleElement } from 'ibm-wch-sdk-ng';
 
 export const KEY_TITLE = 'title';
 export const KEY_ACTION_URL = 'actionUrl';
 export const KEY_SUBMIT_BUTTON_LABEL = 'submitButtonLabel';
 export const KEY_TERMS = 'terms';
 export const KEY_SUBMIT_MESSAGE = 'submitMessage';
+export const KEY_OPEN_RESULTS_TAB = 'openResultsTab';
 export const KEY_FORM_ELEMENTS = 'formElements';
 
 /*
@@ -70,6 +71,17 @@ export interface WcaEmbedForm {
 
     /**
      * {
+     *   "elementType": "toggle",
+     *   "helpText": "Toggle this on if you would like a new browser tab to open and display database results from WCA upon form submission. Otherwise, the results will open in the current browser window.",
+     *   "key": "openResultsTab",
+     *   "label": "Open results tab",
+     *   "statement": "Turn on to open WCA form results in a new tab."
+     * }
+    */
+    ['openResultsTab']?: SingleToggleElement;
+
+    /**
+     * {
      *   "allowMultipleValues": true,
      *   "elementType": "reference",
      *   "fieldLabel": "Form element",
@@ -118,6 +130,7 @@ export function isWcaEmbedForm(aValue: any): aValue is WcaEmbedForm {
         && (!aValue[KEY_SUBMIT_BUTTON_LABEL] || isSingleTextElement(aValue[KEY_SUBMIT_BUTTON_LABEL]))
         && (!aValue[KEY_TERMS] || isSingleTextElement(aValue[KEY_TERMS]))
         && (!aValue[KEY_SUBMIT_MESSAGE] || isSingleTextElement(aValue[KEY_SUBMIT_MESSAGE]))
+        && (!aValue[KEY_OPEN_RESULTS_TAB] || isSingleToggleElement(aValue[KEY_OPEN_RESULTS_TAB]))
         && isMultiReferenceElement(aValue[KEY_FORM_ELEMENTS])
         ;
 }
@@ -199,6 +212,17 @@ export interface WcaEmbedFormType {
      * }
     */
     ['submitMessage']?: string;
+
+    /**
+     * {
+     *   "elementType": "toggle",
+     *   "helpText": "Toggle this on if you would like a new browser tab to open and display database results from WCA upon form submission.",
+     *   "key": "openResultsTab",
+     *   "label": "Open results tab",
+     *   "statement": "Turn on to open WCA results page upon form submit."
+     * }
+    */
+    ['openResultsTab']?: boolean;
 
     /**
      * {

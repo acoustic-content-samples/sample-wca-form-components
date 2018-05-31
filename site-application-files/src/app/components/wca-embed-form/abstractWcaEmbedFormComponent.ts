@@ -112,6 +112,24 @@ abstract class AbstractWcaEmbedFormComponent extends AbstractRenderingComponent 
 
     /*
      * {
+     *   "elementType": "toggle",
+     *   "helpText": "Toggle this on if you would like a new browser tab to open and display database results from WCA upon form submission. Otherwise, the results will open in the current browser window.",
+     *   "key": "openResultsTab",
+     *   "label": "Open results tab",
+     *   "statement": "Turn on to open WCA form results in a new tab."
+     * }
+     */
+    @RenderingContextBinding('toggle.openResultsTab', false)
+    readonly onOpenResultsTab: Observable<boolean>;
+
+    /*
+     * @see #onOpenResultsTab
+     */
+    @RenderingContextBinding()
+    readonly openResultsTab: boolean;
+
+    /*
+     * {
      *   "allowMultipleValues": true,
      *   "elementType": "reference",
      *   "fieldLabel": "Form element",

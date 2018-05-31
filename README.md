@@ -75,15 +75,20 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![configure embed](/doc/images/configureEmbed.png)
 
-3. Go directly to your WCA form in a browser:
+3. (Optional) If you want the form to display the results from WCA in a new browser tab upon form submission, turn on the "Open results tab" toggle:
+![Open results in a new tab](/doc/images/openResultsPage.png)
+Leaving the toggle off displays the results in the current browser window. Due to cross-site security limitations in WCA, displaying this results page (either in the current or a new tab) cannot be prevented altogether. In order to make this flow more user-friendly, a best practice would be to include a link back to WCH from the WCA results page:
+![Link to go back to WCH](/doc/images/goBack.png)
+
+4. Go directly to your WCA form in a browser:
 
 ![form](/doc/images/form.png)
 
-4. Inspect the form using your developer tools to get the POST action url (ignore URL parameters), the form input fields and options:
+5. Inspect the form using your developer tools to get the POST action url (ignore URL parameters), the form input fields and options:
 
 ![form inputs](/doc/images/formInputs.png)
 
-5. For each form element, compose a new **WCA form element** in your **WCA embed form** content item:
+6. For each form element, compose a new **WCA form element** in your **WCA embed form** content item:
 
 - Text input:
 ```
@@ -176,7 +181,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![checkbox example](/doc/images/checkboxExample.png)
 
-6. Publish your changes to view the form on your live site:
+7. Publish your changes to view the form on your live site:
 
 ![embed example](/doc/images/embedExample.png)
 
