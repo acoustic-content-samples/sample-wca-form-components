@@ -75,7 +75,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![configure embed](/doc/images/configureEmbed.png)
 
-3. (Optional) If you want the form to display the results from WCA in a new browser tab upon form submission, turn on the "Open results tab" toggle:
+3. **Optional**: If you want the form to display the results from WCA in a new browser tab upon form submission, turn on the "Open results tab" toggle:
 
 ![Open results in a new tab](/doc/images/openResultsPage.png)
 
