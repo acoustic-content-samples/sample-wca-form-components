@@ -36,7 +36,7 @@ See the end result for each of the two samples:
 ## Install and deploy the sample
 
 ### Configure your wchtools
-1. Get your WCH tenant API URL by copying it from your WCH homepage -> **your username** on the header -> Hub information -> API URL -> Copy to clipboard
+1. Open the "Hub information" for your tenant and copy the API URL.
 2. Run `wchtools init` in your command line. Enter your username and API URL to configure wchtools.
 
 ### Clone and install the sample content-artifacts and site-application-files
@@ -190,7 +190,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ## Samples go live
 1. Ensure your new pages and content items are published.
-2. Go to your WCH homepage -> **your username** on the header -> Hub information.
+2. Open the "Hub information" for your tenant.
 3. View your published site by clicking "Live site".
 
 ### Advanced customization of the WCA form component
