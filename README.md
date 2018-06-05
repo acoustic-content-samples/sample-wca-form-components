@@ -92,7 +92,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 6. For each form element, compose a new **WCA form element** in your **WCA embed form** content item. See these examples of each form type:
 
-	- Type: `text`:
+- Type `text`:
 
 ```
 <input name="COLUMN22" type="text" label="First Name">
@@ -100,7 +100,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![text example](/doc/images/textExample.png)
 
-	- Type: `email`, required with a placeholder:
+- Type `email`, required with a placeholder:
 
 ```
 <input name="EMAIL" type="email" label="Email" placeholder="name@domain.com" required>
@@ -109,7 +109,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![email example](/doc/images/emailExample.png)
 
-	- Type: `radio`, add an option in the **WCA form element** for each radio button `value` in the group:
+- Type `radio`, add an option in the **WCA form element** for each radio button `value` in the group:
 
 ```
 <table>
@@ -131,7 +131,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![radio example](/doc/images/radioExample.png)
 
-	- Type: `select`, add an option for each `value` in the `select` drop-down:
+- Type `select`, add an option for each `value` in the `select` drop-down:
 
 ```
 <select name="COLUMN94" label="Age Range">
@@ -146,7 +146,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![select example](/doc/images/selectExample.png)
 
-	- Type: `checkbox`, add an option for each `value` in the group of checkboxes:
+- Type `checkbox`, add an option for each `value` in the group of checkboxes:
 
 ```
 <table>
