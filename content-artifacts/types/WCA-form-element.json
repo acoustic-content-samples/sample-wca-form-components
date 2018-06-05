@@ -61,7 +61,7 @@
     },
     {
       "elementType": "text",
-      "label": "value",
+      "label": "value (default)",
       "key": "value",
       "required": false,
       "helpText": "The default value for the form element (often empty)."
