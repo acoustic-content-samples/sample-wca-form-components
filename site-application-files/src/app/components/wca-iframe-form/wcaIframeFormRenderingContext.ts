@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators/map';
 import {
     SingleLinkElement,
     RenderingContext
-} from 'ibm-wch-sdk-ng';
+} from '@ibm-wch-sdk/ng';
 import { KEY_URL, WcaIframeForm, isWcaIframeForm } from './../../elements/wca-iframe-form/wcaIframeFormType';
 
 /*

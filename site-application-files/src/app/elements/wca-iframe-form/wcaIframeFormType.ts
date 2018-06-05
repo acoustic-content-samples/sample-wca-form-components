@@ -1,7 +1,7 @@
 /**
  * Do not modify this file, it is auto-generated.
  */
-import { GroupElement, Link, SingleLinkElement, isMultiGroupElement, isSingleGroupElement, isSingleLinkElement } from 'ibm-wch-sdk-ng';
+import { GroupElement, Link, SingleLinkElement, isMultiGroupElement, isSingleGroupElement, isSingleLinkElement } from '@ibm-wch-sdk/ng';
 
 export const KEY_URL = 'url';
 

@@ -1,7 +1,7 @@
 /**
  * Do not modify this file, it is auto-generated.
  */
-import { GroupElement, MultiTextElement, OptionSelection, SingleOptionSelectionElement, SingleTextElement, SingleToggleElement, isMultiGroupElement, isMultiTextElement, isSingleGroupElement, isSingleOptionSelectionElement, isSingleTextElement, isSingleToggleElement } from 'ibm-wch-sdk-ng';
+import { GroupElement, MultiTextElement, OptionSelection, SingleOptionSelectionElement, SingleTextElement, SingleToggleElement, isMultiGroupElement, isMultiTextElement, isSingleGroupElement, isSingleOptionSelectionElement, isSingleTextElement, isSingleToggleElement } from '@ibm-wch-sdk/ng';
 
 export const KEY_NAME = 'name';
 export const KEY_TYPE = 'type';

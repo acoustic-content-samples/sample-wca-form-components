@@ -1,4 +1,4 @@
-import { LayoutComponent } from 'ibm-wch-sdk-ng';
+import { LayoutComponent } from '@ibm-wch-sdk/ng';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TypeWcaIframeFormComponent } from './../../components/wca-iframe-form/typeWcaIframeFormComponent';
 

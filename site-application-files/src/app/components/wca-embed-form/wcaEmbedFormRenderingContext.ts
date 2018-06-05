@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators/map';
 import {
     SingleLinkElement,
     RenderingContext
-} from 'ibm-wch-sdk-ng';
+} from '@ibm-wch-sdk/ng';
 import { KEY_ACTION_URL, KEY_FORM_ELEMENTS, KEY_SUBMIT_BUTTON_LABEL, KEY_SUBMIT_MESSAGE, KEY_TERMS, KEY_TITLE, WcaEmbedForm, isWcaEmbedForm } from './../../elements/wca-embed-form/wcaEmbedFormType';
 
 /*

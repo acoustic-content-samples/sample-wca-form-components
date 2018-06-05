@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators/map';
 import {
     OptionSelection,
     RenderingContext
-} from 'ibm-wch-sdk-ng';
+} from '@ibm-wch-sdk/ng';
 import { KEY_IS_REQUIRED, KEY_LABEL, KEY_NAME, KEY_OPTION, KEY_PLACEHOLDER, KEY_TYPE, KEY_VALUE, WcaFormElement, isWcaFormElement } from './../../elements/wca-form-element/wcaFormElementType';
 
 /*

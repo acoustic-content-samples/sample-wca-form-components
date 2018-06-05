@@ -1,4 +1,4 @@
-import { LayoutComponent } from 'ibm-wch-sdk-ng';
+import { LayoutComponent } from '@ibm-wch-sdk/ng';
 import { Component } from '@angular/core';
 import { TypeWcaFormElementComponent } from './../../components/wca-form-element/typeWcaFormElementComponent';
 

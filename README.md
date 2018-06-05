@@ -50,6 +50,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 1. From within the _wch-site-application_ directory run:
 	- `npm run build` to compile the project. Make sure there is no error during the build process.
 	- `npm run deploy` to your WCH tenant.
+**Note**: Use `ibm-wch-sdk-ng` instead of `@ibm-wch-sdk/ng` in the WCA form component (_src/app/components/wca-*/*.ts_), element (_src/app/elements/wca-*/wca*Type.ts_) and layout (_src/app/layouts/wca-*/wca*Layout.ts_) imports, if you are using Angular 5.
 
 ## Add an iframe form to a page
 1. Copy the URL to your form from WCA:

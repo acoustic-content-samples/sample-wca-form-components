@@ -5,7 +5,7 @@ import {
     Observable
 } from 'rxjs/Observable';
 import { WcaFormElementRenderingContext, assertWcaFormElementRenderingContext, isWcaFormElementRenderingContext } from './wcaFormElementRenderingContext';
-import { AbstractRenderingComponent, OptionSelection, RenderingContext, RenderingContextBinding } from 'ibm-wch-sdk-ng';
+import { AbstractRenderingComponent, OptionSelection, RenderingContext, RenderingContextBinding } from '@ibm-wch-sdk/ng';
 
 /*
  * @name WCA form element

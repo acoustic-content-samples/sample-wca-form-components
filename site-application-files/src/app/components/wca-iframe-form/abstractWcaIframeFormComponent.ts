@@ -5,7 +5,7 @@ import {
     Observable
 } from 'rxjs/Observable';
 import { WcaIframeFormRenderingContext, assertWcaIframeFormRenderingContext, isWcaIframeFormRenderingContext } from './wcaIframeFormRenderingContext';
-import { AbstractRenderingComponent, Link, RenderingContext, RenderingContextBinding } from 'ibm-wch-sdk-ng';
+import { AbstractRenderingComponent, Link, RenderingContext, RenderingContextBinding } from '@ibm-wch-sdk/ng';
 
 /*
  * @name WCA iframe form

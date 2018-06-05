@@ -1,7 +1,7 @@
 /**
  * Do not modify this file, it is auto-generated.
  */
-import { GroupElement, Link, MultiReferenceElement, RenderingContext, SingleLinkElement, SingleTextElement, SingleToggleElement, isMultiGroupElement, isMultiReferenceElement, isSingleGroupElement, isSingleLinkElement, isSingleTextElement, isSingleToggleElement } from 'ibm-wch-sdk-ng';
+import { GroupElement, Link, MultiReferenceElement, RenderingContext, SingleLinkElement, SingleTextElement, SingleToggleElement, isMultiGroupElement, isMultiReferenceElement, isSingleGroupElement, isSingleLinkElement, isSingleTextElement, isSingleToggleElement } from '@ibm-wch-sdk/ng';
 
 export const KEY_TITLE = 'title';
 export const KEY_ACTION_URL = 'actionUrl';
