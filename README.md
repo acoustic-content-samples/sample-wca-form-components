@@ -84,13 +84,13 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![Link to go back to WCH](/doc/images/goBack.png)
 
-4. To create your WCA form elements, you will need to inspect your WCA form in a browser. This is the same URL used for the form's Action URL (eg: http://www.sample.net/org/sports/sign-up).
+4. To create your WCA form elements, you will need to inspect your WCA form in a browser. This is the same URL used for the form's Action URL (e.g. http://www.sample.net/org/sports/sign-up).
 
-5. Inspect the form using your developer tools to get the form input fields and options:
+5. Inspect the form using your developer tools to get the `name`s and `type`s of the form input fields, and options. Here is an example form, highlighting the information to be gathered:
 
 ![form inputs](/doc/images/formInputs.png)
 
-6. For each form element, compose a new **WCA form element** in your **WCA embed form** content item:
+6. For each form element, compose a new **WCA form element** in your **WCA embed form** content item. See these examples of each form type:
 
 	- Text input:
 ```
