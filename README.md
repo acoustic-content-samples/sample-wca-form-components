@@ -84,11 +84,11 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![Link to go back to WCH](/doc/images/goBack.png)
 
-4. Go directly to your WCA form in a browser:
+4. To create your WCA form elements, you will need to inspect your WCA form in a browser. This is the same URL used for the form's Action URL:
 
 ![form](/doc/images/form.png)
 
-5. Inspect the form using your developer tools to get the POST action url (ignore URL parameters), the form input fields and options:
+5. Inspect the form using your developer tools to get the form input fields and options:
 
 ![form inputs](/doc/images/formInputs.png)
 
