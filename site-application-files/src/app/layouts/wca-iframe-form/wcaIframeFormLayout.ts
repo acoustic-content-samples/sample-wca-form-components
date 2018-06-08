@@ -1,3 +1,7 @@
+/*
+Copyright IBM Corporation 2017.
+LICENSE: Apache License, Version 2.0
+*/
 import { LayoutComponent } from '@ibm-wch-sdk/ng';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TypeWcaIframeFormComponent } from './../../components/wca-iframe-form/typeWcaIframeFormComponent';

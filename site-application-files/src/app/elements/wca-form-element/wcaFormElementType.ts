@@ -1,6 +1,10 @@
 /**
  * Do not modify this file, it is auto-generated.
  */
+/*
+Copyright IBM Corporation 2017.
+LICENSE: Apache License, Version 2.0
+*/
 import { GroupElement, MultiTextElement, OptionSelection, SingleOptionSelectionElement, SingleTextElement, SingleToggleElement, isMultiGroupElement, isMultiTextElement, isSingleGroupElement, isSingleOptionSelectionElement, isSingleTextElement, isSingleToggleElement } from '@ibm-wch-sdk/ng';
 
 export const KEY_NAME = 'name';

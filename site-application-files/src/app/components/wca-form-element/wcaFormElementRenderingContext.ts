@@ -1,6 +1,10 @@
 /**
  * Do not modify this file, it is auto-generated.
  */
+/*
+Copyright IBM Corporation 2017.
+LICENSE: Apache License, Version 2.0
+*/
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators/map';
 

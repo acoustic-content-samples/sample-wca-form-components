@@ -1,6 +1,10 @@
 /**
  * Do not modify this file, it is auto-generated.
  */
+/*
+Copyright IBM Corporation 2017.
+LICENSE: Apache License, Version 2.0
+*/
 import { GroupElement, Link, MultiReferenceElement, RenderingContext, SingleLinkElement, SingleTextElement, SingleToggleElement, isMultiGroupElement, isMultiReferenceElement, isSingleGroupElement, isSingleLinkElement, isSingleTextElement, isSingleToggleElement } from '@ibm-wch-sdk/ng';
 
 export const KEY_TITLE = 'title';

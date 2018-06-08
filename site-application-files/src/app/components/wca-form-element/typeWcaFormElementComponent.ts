@@ -1,3 +1,7 @@
+/*
+Copyright IBM Corporation 2017.
+LICENSE: Apache License, Version 2.0
+*/
 import {
     RenderingContext
 } from '@ibm-wch-sdk/ng';

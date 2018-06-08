@@ -1,3 +1,7 @@
+/*
+Copyright IBM Corporation 2017.
+LICENSE: Apache License, Version 2.0
+*/
 import { LayoutComponent } from '@ibm-wch-sdk/ng';
 import { Component } from '@angular/core';
 import { TypeWcaEmbedFormComponent } from './../../components/wca-embed-form/typeWcaEmbedFormComponent';
