@@ -29,7 +29,7 @@ See the end result for each of the two samples:
 
 ## Prerequisites
 * A WCH tenant in Trial or Standard Tier
-* **Latest** [wch-site-application source](https://github.com/ibm-wch/wch-site-application)
+* [wch-site-application source](https://github.com/ibm-wch/wch-site-application) with **build date of June 7th, 2018 or later**
 * wchtools-cli v2.0.3 or above
 * Node.js v6.11.1 or above
 
