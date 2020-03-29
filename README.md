@@ -1,6 +1,6 @@
 # sample-wca-form-components
 
-This repository contains a set of sample site components to showcase how to integrate Watson Campaign Automation (WCA) forms into the Watson Content Hub Sites feature. The samples include two techniques: iframe inclusion, and embedding a WCA form into a native WCH component.
+This repository contains a set of sample site components to showcase how to integrate Watson Campaign Automation (WCA) forms into the Acoustic Content (formerly Watson Content Hub or WCH) Sites feature. The samples include two techniques: iframe inclusion, and embedding a WCA form into a native Acoustic Content component.
 
 ## Table of contents
 - [Table of Contents](#table-of-contents)
