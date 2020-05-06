@@ -57,7 +57,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ![copy form URL](/doc/images/copyFormURL.png)
 
-2. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
+2. Create a new page or edit an existing one.
 3. Create and configure a new **WCA iframe form** on the page.
 **Important**: Use `https` so the cross-origin iframe can be served from within your WCH site:
 
@@ -69,7 +69,7 @@ npm run install-layouts-from-git https://github.com/ibm-wch/sample-wca-form-comp
 
 ## Add an embedded form to a page
 
-1. [Create a new page](https://developer.ibm.com/customer-engagement/tutorials/creating-pages-website/) or edit an existing one.
+1. Create a new page or edit an existing one.
 
 2. Create a new **WCA embed form** content item on the page.
 **Important**: Use a fully qualified `http` link for the "Action URL", so WCA will accept the request:
